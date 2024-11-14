@@ -1,0 +1,2 @@
+Generation,Individus,Average Fitness,Std Fitness,Min Fitness,Max Fitness,Execution Time,Best Individual
+0,100,8.17,1.9547634127944997,0.0,9.0,10.671027183532715,((aux * j) * (fini - fini))

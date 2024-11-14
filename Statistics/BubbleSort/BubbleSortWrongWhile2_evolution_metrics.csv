@@ -1,0 +1,3 @@
+Generation,Individus,Average Fitness,Std Fitness,Min Fitness,Max Fitness,Execution Time,Best Individual
+0,100,10.25,6.008951655655086,1.0,25.0,34.118425130844116,((fini > j) <= i)
+1,66,8.06,4.981606166689615,0.0,25.0,34.118425130844116,((fini > j) <= i)

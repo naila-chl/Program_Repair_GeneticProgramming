@@ -1,0 +1,5027 @@
+File Name,Content
+Gcd2.py,"import unittest
+
+class Gcd2:
+    @staticmethod
+    def gcd(a, b):
+        if a == 0:
+            return b
+        while b != 0:
+            if a > b:
+                a = a - b
+            else:
+                b = a - b
+        return a
+    
+class GcdTest(unittest.TestCase):
+    def test_0(self):
+        result = Gcd2.gcd(0, 0)
+        self.assertEqual(0, result)
+        
+    def test_1(self):
+        result = Gcd2.gcd(5, 5)
+        self.assertEqual(5, result)
+    
+    def test_2(self):
+        result = Gcd2.gcd(10, 10)
+        self.assertEqual(10, result)
+   
+    def test_3(self):
+        result = Gcd2.gcd(15, 15)
+        self.assertEqual(15, result)
+   
+    def test_4(self):
+        result = Gcd2.gcd(20, 20)
+        self.assertEqual(20, result)
+   
+    def test_5(self):
+        result = Gcd2.gcd(5, 10)
+        self.assertEqual(5, result)
+    
+    def test_6(self):
+        result = Gcd2.gcd(10, 15)
+        self.assertEqual(5, result)
+    
+    def test_7(self):
+        result = Gcd2.gcd(15, 20)
+        self.assertEqual(5, result)
+    
+    def test_8(self):
+        result = Gcd2.gcd(0, 10)
+        self.assertEqual(10, result)
+    
+    def test_9(self):
+        result = Gcd2.gcd(5, 15)
+        self.assertEqual(5, result)
+    
+    def test_10(self):
+        result = Gcd2.gcd(10, 20)
+        self.assertEqual(10, result)
+    
+    def test_11(self):
+        result = Gcd2.gcd(20, 0)
+        self.assertEqual(20, result)
+    
+    def test_12(self):
+        result = Gcd2.gcd(0, 15)
+        self.assertEqual(15, result)
+    
+    def test_13(self):
+        result = Gcd2.gcd(5, 20)
+        self.assertEqual(5, result)
+    
+    def test_14(self):
+        result = Gcd2.gcd(15, 0)
+        self.assertEqual(15, result)
+    
+    def test_15(self):
+        result = Gcd2.gcd(20, 5)
+        self.assertEqual(5, result)
+    
+    def test_16(self):
+        result = Gcd2.gcd(0, 20)
+        self.assertEqual(20, result)
+    
+    def test_17(self):
+        result = Gcd2.gcd(10, 0)
+        self.assertEqual(10, result)
+    
+    def test_18(self):
+        result = Gcd2.gcd(15, 5)
+        self.assertEqual(5, result)
+    
+    def test_19(self):
+        result = Gcd2.gcd(20, 10)
+        self.assertEqual(10, result)
+    
+    def test_20(self):
+        result = Gcd2.gcd(5, 0)
+        self.assertEqual(5, result)
+    
+    def test_21(self):
+        result = Gcd2.gcd(10, 5)
+        self.assertEqual(5, result)
+    
+    def test_22(self):
+        result = Gcd2.gcd(15, 10)
+        self.assertEqual(5, result)
+    
+    def test_23(self):
+        result = Gcd2.gcd(20, 15)
+        self.assertEqual(5, result)
+
+    def test_24(self):
+        result = Gcd2.gcd(0, 5)
+        self.assertEqual(5, result)
+
+
+if __name__ == '__main__':
+    unittest.main()"
+Gcd.py,"
+import unittest
+
+class Gcd:
+    @staticmethod
+    def gcd(a, b):
+        if a == 0:
+            return b
+        while b != 0:
+            if a > b:
+                a = b - a
+            else:
+                b = b - a
+        return a  
+
+class GcdTest(unittest.TestCase):
+    def test_0(self):
+        result = Gcd.gcd(0, 0)
+        self.assertEqual(0, result)
+        
+    def test_1(self):
+        result = Gcd.gcd(5, 5)
+        self.assertEqual(5, result)
+    
+    def test_2(self):
+        result = Gcd.gcd(10, 10)
+        self.assertEqual(10, result)
+   
+    def test_3(self):
+        result = Gcd.gcd(15, 15)
+        self.assertEqual(15, result)
+   
+    def test_4(self):
+        result = Gcd.gcd(20, 20)
+        self.assertEqual(20, result)
+   
+    def test_5(self):
+        result = Gcd.gcd(5, 10)
+        self.assertEqual(5, result)
+    
+    def test_6(self):
+        result = Gcd.gcd(10, 15)
+        self.assertEqual(5, result)
+    
+    def test_7(self):
+        result = Gcd.gcd(15, 20)
+        self.assertEqual(5, result)
+    
+    def test_8(self):
+        result = Gcd.gcd(0, 10)
+        self.assertEqual(10, result)
+    
+    def test_9(self):
+        result = Gcd.gcd(5, 15)
+        self.assertEqual(5, result)
+    
+    def test_10(self):
+        result = Gcd.gcd(10, 20)
+        self.assertEqual(10, result)
+    
+    def test_11(self):
+        result = Gcd.gcd(20, 0)
+        self.assertEqual(20, result)
+    
+    def test_12(self):
+        result = Gcd.gcd(0, 15)
+        self.assertEqual(15, result)
+    
+    def test_13(self):
+        result = Gcd.gcd(5, 20)
+        self.assertEqual(5, result)
+    
+    def test_14(self):
+        result = Gcd.gcd(15, 0)
+        self.assertEqual(15, result)
+    
+    def test_15(self):
+        result = Gcd.gcd(20, 5)
+        self.assertEqual(5, result)
+    
+    def test_16(self):
+        result = Gcd.gcd(0, 20)
+        self.assertEqual(20, result)
+    
+    def test_17(self):
+        result = Gcd.gcd(10, 0)
+        self.assertEqual(10, result)
+    
+    def test_18(self):
+        result = Gcd.gcd(15, 5)
+        self.assertEqual(5, result)
+    
+    def test_19(self):
+        result = Gcd.gcd(20, 10)
+        self.assertEqual(10, result)
+    
+    def test_20(self):
+        result = Gcd.gcd(5, 0)
+        self.assertEqual(5, result)
+    
+    def test_21(self):
+        result = Gcd.gcd(10, 5)
+        self.assertEqual(5, result)
+    
+    def test_22(self):
+        result = Gcd.gcd(15, 10)
+        self.assertEqual(5, result)
+    
+    def test_23(self):
+        result = Gcd.gcd(20, 15)
+        self.assertEqual(5, result)
+
+    def test_24(self):
+        result = Gcd.gcd(0, 5)
+        self.assertEqual(5, result)
+        
+if __name__ == '__main__':
+    unittest.main()
+
+"
+GcdWrongIf2.py,"import unittest
+
+class GcdWrongIf2:
+    @staticmethod
+    def gcd(a, b):
+        if a < b:  # a == 0
+            return b
+        while b != 0:
+            if a > b:
+                a = a - b
+            else:
+                b = b - a
+        return a
+
+class GcdTest(unittest.TestCase):   
+    def test_0(self):
+        result = GcdWrongIf2.gcd(0, 0)
+        self.assertEqual(0, result)
+    
+    def test_1(self):
+        result = GcdWrongIf2.gcd(5, 5)
+        self.assertEqual(5, result)
+    
+    def test_2(self):
+        result = GcdWrongIf2.gcd(10, 10)
+        self.assertEqual(10, result)
+    
+    def test_3(self):
+        result = GcdWrongIf2.gcd(15, 15)
+        self.assertEqual(15, result)
+    
+    def test_4(self):
+        result = GcdWrongIf2.gcd(20, 20)
+        self.assertEqual(20, result)
+    
+    def test_5(self):
+        result = GcdWrongIf2.gcd(5, 10)
+        self.assertEqual(5, result)
+    
+    def test_6(self):
+        result = GcdWrongIf2.gcd(10, 15)
+        self.assertEqual(5, result)
+    
+    def test_7(self):
+        result = GcdWrongIf2.gcd(15, 20)
+        self.assertEqual(5, result)
+    
+    def test_8(self):
+        result = GcdWrongIf2.gcd(0, 10)
+        self.assertEqual(10, result)
+    
+    def test_9(self):
+        result = GcdWrongIf2.gcd(5, 15)
+        self.assertEqual(5, result)
+    
+    def test_10(self):
+        result = GcdWrongIf2.gcd(10, 20)
+        self.assertEqual(10, result)
+    
+    def test_11(self):
+        result = GcdWrongIf2.gcd(20, 0)
+        self.assertEqual(20, result)
+    
+    def test_12(self):
+        result = GcdWrongIf2.gcd(0, 15)
+        self.assertEqual(15, result)
+    
+    def test_13(self):
+        result = GcdWrongIf2.gcd(5, 20)
+        self.assertEqual(5, result)
+    
+    def test_14(self):
+        result = GcdWrongIf2.gcd(15, 0)
+        self.assertEqual(15, result)
+    
+    def test_15(self):
+        result = GcdWrongIf2.gcd(20, 5)
+        self.assertEqual(5, result)
+    
+    def test_16(self):
+        result = GcdWrongIf2.gcd(0, 20)
+        self.assertEqual(20, result)
+    
+    def test_17(self):
+        result = GcdWrongIf2.gcd(10, 0)
+        self.assertEqual(10, result)
+    
+    def test_18(self):
+        result = GcdWrongIf2.gcd(15, 5)
+        self.assertEqual(5, result)
+    
+    def test_19(self):
+        result = GcdWrongIf2.gcd(20, 10)
+        self.assertEqual(10, result)
+    
+    def test_20(self):
+        result = GcdWrongIf2.gcd(5, 0)
+        self.assertEqual(5, result)
+    
+    def test_21(self):
+        result = GcdWrongIf2.gcd(10, 5)
+        self.assertEqual(5, result)
+    
+    def test_22(self):
+        result = GcdWrongIf2.gcd(15, 10)
+        self.assertEqual(5, result)
+    
+    def test_23(self):
+        result = GcdWrongIf2.gcd(20, 15)
+        self.assertEqual(5, result)
+    
+    def test_24(self):
+        result = GcdWrongIf2.gcd(0, 5)
+        self.assertEqual(5, result)
+
+if __name__ == '__main__':
+    unittest.main()"
+GcdWrongIf3.py,"import unittest
+
+class GcdWrongIf3:
+    @staticmethod
+    def gcd(a, b):
+        if a == 0:
+            return b
+        while b != 0:
+            if a < b:  # (a > b)
+                a = a - b
+            else:
+                b = b - a
+        return a
+
+class GcdTest(unittest.TestCase):   
+    def test_0(self):
+        result = GcdWrongIf3.gcd(0, 0)
+        self.assertEqual(0, result)
+    
+    def test_1(self):
+        result = GcdWrongIf3.gcd(5, 5)
+        self.assertEqual(5, result)
+    
+    def test_2(self):
+        result = GcdWrongIf3.gcd(10, 10)
+        self.assertEqual(10, result)
+    
+    def test_3(self):
+        result = GcdWrongIf3.gcd(15, 15)
+        self.assertEqual(15, result)
+    
+    def test_4(self):
+        result = GcdWrongIf3.gcd(20, 20)
+        self.assertEqual(20, result)
+    
+    def test_5(self):
+        result = GcdWrongIf3.gcd(5, 10)
+        self.assertEqual(5, result)
+    
+    def test_6(self):
+        result = GcdWrongIf3.gcd(10, 15)
+        self.assertEqual(5, result)
+    
+    def test_7(self):
+        result = GcdWrongIf3.gcd(15, 20)
+        self.assertEqual(5, result)
+    
+    def test_8(self):
+        result = GcdWrongIf3.gcd(0, 10)
+        self.assertEqual(10, result)
+    
+    def test_9(self):
+        result = GcdWrongIf3.gcd(5, 15)
+        self.assertEqual(5, result)
+    
+    def test_10(self):
+        result = GcdWrongIf3.gcd(10, 20)
+        self.assertEqual(10, result)
+    
+    def test_11(self):
+        result = GcdWrongIf3.gcd(20, 0)
+        self.assertEqual(20, result)
+    
+    def test_12(self):
+        result = GcdWrongIf3.gcd(0, 15)
+        self.assertEqual(15, result)
+    
+    def test_13(self):
+        result = GcdWrongIf3.gcd(5, 20)
+        self.assertEqual(5, result)
+    
+    def test_14(self):
+        result = GcdWrongIf3.gcd(15, 0)
+        self.assertEqual(15, result)
+    
+    def test_15(self):
+        result = GcdWrongIf3.gcd(20, 5)
+        self.assertEqual(5, result)
+    
+    def test_16(self):
+        result = GcdWrongIf3.gcd(0, 20)
+        self.assertEqual(20, result)
+    
+    def test_17(self):
+        result = GcdWrongIf3.gcd(10, 0)
+        self.assertEqual(10, result)
+    
+    def test_18(self):
+        result = GcdWrongIf3.gcd(15, 5)
+        self.assertEqual(5, result)
+    
+    def test_19(self):
+        result = GcdWrongIf3.gcd(20, 10)
+        self.assertEqual(10, result)
+    
+    def test_20(self):
+        result = GcdWrongIf3.gcd(5, 0)
+        self.assertEqual(5, result)
+    
+    def test_21(self):
+        result = GcdWrongIf3.gcd(10, 5)
+        self.assertEqual(5, result)
+    
+    def test_22(self):
+        result = GcdWrongIf3.gcd(15, 10)
+        self.assertEqual(5, result)
+    
+    def test_23(self):
+        result = GcdWrongIf3.gcd(20, 15)
+        self.assertEqual(5, result)
+    
+    def test_24(self):
+        result = GcdWrongIf3.gcd(0, 5)
+        self.assertEqual(5, result)
+
+if __name__ == '__main__':
+    unittest.main()"
+GcdWrongIf1.py,"import unittest
+
+class GcdWrongIf1:
+    @staticmethod
+    def gcd(a, b):
+        if a == 0 and b == 0:  # a == 0
+            return b
+        while b != 0:
+            if a > b:
+                a = a - b
+            else:
+                b = b - a
+        return a
+    
+class GcdTest(unittest.TestCase):   
+    def test_0(self):
+        result = GcdWrongIf1.gcd(0, 0)
+        self.assertEqual(0, result)
+    
+    def test_1(self):
+        result = GcdWrongIf1.gcd(5, 5)
+        self.assertEqual(5, result)
+    
+    def test_2(self):
+        result = GcdWrongIf1.gcd(10, 10)
+        self.assertEqual(10, result)
+    
+    def test_3(self):
+        result = GcdWrongIf1.gcd(15, 15)
+        self.assertEqual(15, result)
+    
+    def test_4(self):
+        result = GcdWrongIf1.gcd(20, 20)
+        self.assertEqual(20, result)
+    
+    def test_5(self):
+        result = GcdWrongIf1.gcd(5, 10)
+        self.assertEqual(5, result)
+    
+    def test_6(self):
+        result = GcdWrongIf1.gcd(10, 15)
+        self.assertEqual(5, result)
+    
+    def test_7(self):
+        result = GcdWrongIf1.gcd(15, 20)
+        self.assertEqual(5, result)
+    
+    def test_8(self):
+        result = GcdWrongIf1.gcd(0, 10)
+        self.assertEqual(10, result)
+    
+    def test_9(self):
+        result = GcdWrongIf1.gcd(5, 15)
+        self.assertEqual(5, result)
+    
+    def test_10(self):
+        result = GcdWrongIf1.gcd(10, 20)
+        self.assertEqual(10, result)
+    
+    def test_11(self):
+        result = GcdWrongIf1.gcd(20, 0)
+        self.assertEqual(20, result)
+    
+    def test_12(self):
+        result = GcdWrongIf1.gcd(0, 15)
+        self.assertEqual(15, result)
+    
+    def test_13(self):
+        result = GcdWrongIf1.gcd(5, 20)
+        self.assertEqual(5, result)
+    
+    def test_14(self):
+        result = GcdWrongIf1.gcd(15, 0)
+        self.assertEqual(15, result)
+    
+    def test_15(self):
+        result = GcdWrongIf1.gcd(20, 5)
+        self.assertEqual(5, result)
+    
+    def test_16(self):
+        result = GcdWrongIf1.gcd(0, 20)
+        self.assertEqual(20, result)
+    
+    def test_17(self):
+        result = GcdWrongIf1.gcd(10, 0)
+        self.assertEqual(10, result)
+    
+    def test_18(self):
+        result = GcdWrongIf1.gcd(15, 5)
+        self.assertEqual(5, result)
+    
+    def test_19(self):
+        result = GcdWrongIf1.gcd(20, 10)
+        self.assertEqual(10, result)
+    
+    def test_20(self):
+        result = GcdWrongIf1.gcd(5, 0)
+        self.assertEqual(5, result)
+    
+    def test_21(self):
+        result = GcdWrongIf1.gcd(10, 5)
+        self.assertEqual(5, result)
+    
+    def test_22(self):
+        result = GcdWrongIf1.gcd(15, 10)
+        self.assertEqual(5, result)
+    
+    def test_23(self):
+        result = GcdWrongIf1.gcd(20, 15)
+        self.assertEqual(5, result)
+    
+    def test_24(self):
+        result = GcdWrongIf1.gcd(0, 5)
+        self.assertEqual(5, result)
+
+if __name__ == '__main__':
+    unittest.main()
+"
+GcdWrongIf4.py,"import unittest
+
+class GcdWrongIf4:
+    @staticmethod
+    def gcd(a, b):
+        if b == 0:  # (a == 0)
+            return b
+        while b != 0:
+            if a > b:
+                a = a - b
+            else:
+                b = b - a
+        return a
+    
+class GcdTest(unittest.TestCase):   
+    def test_0(self):
+        result = GcdWrongIf4.gcd(0, 0)
+        self.assertEqual(0, result)
+    
+    def test_1(self):
+        result = GcdWrongIf4.gcd(5, 5)
+        self.assertEqual(5, result)
+    
+    def test_2(self):
+        result = GcdWrongIf4.gcd(10, 10)
+        self.assertEqual(10, result)
+    
+    def test_3(self):
+        result = GcdWrongIf4.gcd(15, 15)
+        self.assertEqual(15, result)
+    
+    def test_4(self):
+        result = GcdWrongIf4.gcd(20, 20)
+        self.assertEqual(20, result)
+    
+    def test_5(self):
+        result = GcdWrongIf4.gcd(5, 10)
+        self.assertEqual(5, result)
+    
+    def test_6(self):
+        result = GcdWrongIf4.gcd(10, 15)
+        self.assertEqual(5, result)
+    
+    def test_7(self):
+        result = GcdWrongIf4.gcd(15, 20)
+        self.assertEqual(5, result)
+    
+    def test_8(self):
+        result = GcdWrongIf4.gcd(0, 10)
+        self.assertEqual(10, result)
+    
+    def test_9(self):
+        result = GcdWrongIf4.gcd(5, 15)
+        self.assertEqual(5, result)
+    
+    def test_10(self):
+        result = GcdWrongIf4.gcd(10, 20)
+        self.assertEqual(10, result)
+    
+    def test_11(self):
+        result = GcdWrongIf4.gcd(20, 0)
+        self.assertEqual(20, result)
+    
+    def test_12(self):
+        result = GcdWrongIf4.gcd(0, 15)
+        self.assertEqual(15, result)
+    
+    def test_13(self):
+        result = GcdWrongIf4.gcd(5, 20)
+        self.assertEqual(5, result)
+    
+    def test_14(self):
+        result = GcdWrongIf4.gcd(15, 0)
+        self.assertEqual(15, result)
+    
+    def test_15(self):
+        result = GcdWrongIf4.gcd(20, 5)
+        self.assertEqual(5, result)
+    
+    def test_16(self):
+        result = GcdWrongIf4.gcd(0, 20)
+        self.assertEqual(20, result)
+    
+    def test_17(self):
+        result = GcdWrongIf4.gcd(10, 0)
+        self.assertEqual(10, result)
+    
+    def test_18(self):
+        result = GcdWrongIf4.gcd(15, 5)
+        self.assertEqual(5, result)
+    
+    def test_19(self):
+        result = GcdWrongIf4.gcd(20, 10)
+        self.assertEqual(10, result)
+    
+    def test_20(self):
+        result = GcdWrongIf4.gcd(5, 0)
+        self.assertEqual(5, result)
+    
+    def test_21(self):
+        result = GcdWrongIf4.gcd(10, 5)
+        self.assertEqual(5, result)
+    
+    def test_22(self):
+        result = GcdWrongIf4.gcd(15, 10)
+        self.assertEqual(5, result)
+    
+    def test_23(self):
+        result = GcdWrongIf4.gcd(20, 15)
+        self.assertEqual(5, result)
+    
+    def test_24(self):
+        result = GcdWrongIf4.gcd(0, 5)
+        self.assertEqual(5, result)
+
+if __name__ == '__main__':
+    unittest.main()"
+GcdWrongWhile.py,"import unittest
+
+class GcdWrongWhile:
+    @staticmethod
+    def gcd(a, b):
+        if a == 0:
+            return b
+        while a != 0:  # b != 0
+            if a > b:
+                a = a - b
+            else:
+                b = b - a
+        return a
+    
+class GcdTest(unittest.TestCase):   
+    def test_0(self):
+        result = GcdWrongWhile.gcd(0, 0)
+        self.assertEqual(0, result)
+    
+    def test_1(self):
+        result = GcdWrongWhile.gcd(5, 5)
+        self.assertEqual(5, result)
+    
+    def test_2(self):
+        result = GcdWrongWhile.gcd(10, 10)
+        self.assertEqual(10, result)
+    
+    def test_3(self):
+        result = GcdWrongWhile.gcd(15, 15)
+        self.assertEqual(15, result)
+    
+    def test_4(self):
+        result = GcdWrongWhile.gcd(20, 20)
+        self.assertEqual(20, result)
+    
+    def test_5(self):
+        result = GcdWrongWhile.gcd(5, 10)
+        self.assertEqual(5, result)
+    
+    def test_6(self):
+        result = GcdWrongWhile.gcd(10, 15)
+        self.assertEqual(5, result)
+    
+    def test_7(self):
+        result = GcdWrongWhile.gcd(15, 20)
+        self.assertEqual(5, result)
+    
+    def test_8(self):
+        result = GcdWrongWhile.gcd(0, 10)
+        self.assertEqual(10, result)
+    
+    def test_9(self):
+        result = GcdWrongWhile.gcd(5, 15)
+        self.assertEqual(5, result)
+    
+    def test_10(self):
+        result = GcdWrongWhile.gcd(10, 20)
+        self.assertEqual(10, result)
+    
+    def test_11(self):
+        result = GcdWrongWhile.gcd(20, 0)
+        self.assertEqual(20, result)
+    
+    def test_12(self):
+        result = GcdWrongWhile.gcd(0, 15)
+        self.assertEqual(15, result)
+    
+    def test_13(self):
+        result = GcdWrongWhile.gcd(5, 20)
+        self.assertEqual(5, result)
+    
+    def test_14(self):
+        result = GcdWrongWhile.gcd(15, 0)
+        self.assertEqual(15, result)
+    
+    def test_15(self):
+        result = GcdWrongWhile.gcd(20, 5)
+        self.assertEqual(5, result)
+    
+    def test_16(self):
+        result = GcdWrongWhile.gcd(0, 20)
+        self.assertEqual(20, result)
+    
+    def test_17(self):
+        result = GcdWrongWhile.gcd(10, 0)
+        self.assertEqual(10, result)
+    
+    def test_18(self):
+        result = GcdWrongWhile.gcd(15, 5)
+        self.assertEqual(5, result)
+    
+    def test_19(self):
+        result = GcdWrongWhile.gcd(20, 10)
+        self.assertEqual(10, result)
+    
+    def test_20(self):
+        result = GcdWrongWhile.gcd(5, 0)
+        self.assertEqual(5, result)
+    
+    def test_21(self):
+        result = GcdWrongWhile.gcd(10, 5)
+        self.assertEqual(5, result)
+    
+    def test_22(self):
+        result = GcdWrongWhile.gcd(15, 10)
+        self.assertEqual(5, result)
+    
+    def test_23(self):
+        result = GcdWrongWhile.gcd(20, 15)
+        self.assertEqual(5, result)
+    
+    def test_24(self):
+        result = GcdWrongWhile.gcd(0, 5)
+        self.assertEqual(5, result)
+
+if __name__ == '__main__':
+    unittest.main()
+"
+GcdWrongIf-checkpoint.py,"class GcdWrongIf2:
+    @staticmethod
+    def gcd(a, b):
+        if a < b:  # a == 0
+            return b
+        while b != 0:
+            if a > b:
+                a = a - b
+            else:
+                b = b - a
+        return a
+"
+GcdWrongIf1-checkpoint.py,"class GcdWrongIf1:
+    @staticmethod
+    def gcd(a, b):
+        if a == 0 and b == 0:  # a == 0
+            return b
+        while b != 0:
+            if a > b:
+                a = a - b
+            else:
+                b = b - a
+        return a
+"
+Gcd2-checkpoint.py,"
+import unittest
+
+class Gcd2:
+    @staticmethod
+    def gcd(a, b):
+        if a == 0:
+            return b
+        while b != 0:
+            if a > b:
+                a = a - b
+            else:
+                b = a - b
+        return a
+    
+class GcdTest(unittest.TestCase):
+    def test_0(self):
+        result = Gcd2.gcd(0, 0)
+        self.assertEqual(0, result)
+        
+    def test_1(self):
+        result = Gcd2.gcd(5, 5)
+        self.assertEqual(5, result)
+    
+    def test_2(self):
+        result = Gcd2.gcd(10, 10)
+        self.assertEqual(10, result)
+   
+    def test_3(self):
+        result = Gcd2.gcd(15, 15)
+        self.assertEqual(15, result)
+   
+    def test_4(self):
+        result = Gcd2.gcd(20, 20)
+        self.assertEqual(20, result)
+   
+    def test_5(self):
+        result = Gcd2.gcd(5, 10)
+        self.assertEqual(5, result)
+    
+    def test_6(self):
+        result = Gcd2.gcd(10, 15)
+        self.assertEqual(5, result)
+    
+    def test_7(self):
+        result = Gcd2.gcd(15, 20)
+        self.assertEqual(5, result)
+    
+    def test_8(self):
+        result = Gcd2.gcd(0, 10)
+        self.assertEqual(10, result)
+    
+    def test_9(self):
+        result = Gcd2.gcd(5, 15)
+        self.assertEqual(5, result)
+    
+    def test_10(self):
+        result = Gcd2.gcd(10, 20)
+        self.assertEqual(10, result)
+    
+    def test_11(self):
+        result = Gcd2.gcd(20, 0)
+        self.assertEqual(20, result)
+    
+    def test_12(self):
+        result = Gcd2.gcd(0, 15)
+        self.assertEqual(15, result)
+    
+    def test_13(self):
+        result = Gcd2.gcd(5, 20)
+        self.assertEqual(5, result)
+    
+    def test_14(self):
+        result = Gcd2.gcd(15, 0)
+        self.assertEqual(15, result)
+    
+    def test_15(self):
+        result = Gcd2.gcd(20, 5)
+        self.assertEqual(5, result)
+    
+    def test_16(self):
+        result = Gcd2.gcd(0, 20)
+        self.assertEqual(20, result)
+    
+    def test_17(self):
+        result = Gcd2.gcd(10, 0)
+        self.assertEqual(10, result)
+    
+    def test_18(self):
+        result = Gcd2.gcd(15, 5)
+        self.assertEqual(5, result)
+    
+    def test_19(self):
+        result = Gcd2.gcd(20, 10)
+        self.assertEqual(10, result)
+    
+    def test_20(self):
+        result = Gcd2.gcd(5, 0)
+        self.assertEqual(5, result)
+    
+    def test_21(self):
+        result = Gcd2.gcd(10, 5)
+        self.assertEqual(5, result)
+    
+    def test_22(self):
+        result = Gcd2.gcd(15, 10)
+        self.assertEqual(5, result)
+    
+    def test_23(self):
+        result = Gcd2.gcd(20, 15)
+        self.assertEqual(5, result)
+
+    def test_24(self):
+        result = Gcd2.gcd(0, 5)
+        self.assertEqual(5, result)
+
+
+if __name__ == '__main__':
+    unittest.main()
+"
+Gcd-checkpoint.py,"class Gcd:
+    @staticmethod
+    def gcd(a, b):
+        if a == 0:
+            return b
+        while b != 0:
+            if a > b:
+                a = b - a
+            else:
+                b = b - a
+        return a
+"
+GcdWrongIf4-checkpoint.py,"class GcdWrongIf4:
+    @staticmethod
+    def gcd(a, b):
+        if b == 0:  # (a == 0)
+            return b
+        while b != 0:
+            if a > b:
+                a = a - b
+            else:
+                b = b - a
+        return a
+"
+GcdWrongIf3-checkpoint.py,"class GcdWrongIf3:
+    @staticmethod
+    def gcd(a, b):
+        if a == 0:
+            return b
+        while b != 0:
+            if a < b:  # (a > b)
+                a = a - b
+            else:
+                b = b - a
+        return a
+"
+GcdWrongWhile-checkpoint.py,"class GcdWrongWhile:
+    @staticmethod
+    def gcd(a, b):
+        if a == 0:
+            return b
+        while a != 0:  # b != 0
+            if a > b:
+                a = a - b
+            else:
+                b = b - a
+        return a
+"
+BubbleSort4.py,"
+import unittest
+class BubbleSort4:
+    @staticmethod
+    def bubble_sort(tab):
+        tabb = tab.copy()
+        i = 0
+        j = len(tabb) - 1
+        aux = 0
+        fini = 0
+        while fini == 0:
+            fini = 1
+            i = 0
+            while i < j:
+                if tabb[i] > tabb[i + 1]:
+                    aux = tabb[i]
+                    tabb[i] = tabb[i + 1]
+                    tabb[i + 1] = aux
+                    fini = 0
+                i = i + 1
+            j = j + 1  # j = j - 1
+        cpt = 0
+        for k in range(len(tab) - 1):
+            if tabb[k] > tabb[k + 1]:
+                cpt = cpt + 1
+        return cpt
+    
+class TestBubbleSort4(unittest.TestCase):
+    def test_0(self):
+        result = BubbleSort4.bubble_sort([1, 2, 3, 4, 5])
+        self.assertEqual(result, 0)
+
+    def test_1(self):
+        result = BubbleSort4.bubble_sort([5, 4, 3, 2, 1])
+        self.assertEqual(result, 0)
+
+    def test_2(self):
+        result = BubbleSort4.bubble_sort([3, 2, 1, 4, 5])
+        self.assertEqual(result, 0)
+
+    def test_3(self):
+        result = BubbleSort4.bubble_sort([3, 3, 1, 2, 2])
+        self.assertEqual(result, 0)
+
+    def test_4(self):
+        result = BubbleSort4.bubble_sort([])
+        self.assertEqual(result, 0)
+
+    def test_5(self):
+        result = BubbleSort4.bubble_sort([1])
+        self.assertEqual(result, 0)
+
+    def test_6(self):
+        result = BubbleSort4.bubble_sort([2, 2, 2, 2, 2])
+        self.assertEqual(result, 0)
+
+    def test_7(self):
+        result = BubbleSort4.bubble_sort([1, 2, 3, 4, 4])
+        self.assertEqual(result, 0)
+
+    def test_8(self):
+        result = BubbleSort4.bubble_sort([4, 1, 3, 2, 5])
+        self.assertEqual(result, 0)
+
+if __name__ == '__main__':
+    unittest.main()
+"
+BubbleSortWrongWhile1.py,"
+import unittest
+class BubbleSortWrongWhile1:
+    @staticmethod
+    def bubble_sort(tab):
+        tabb = tab.copy()
+        i = 0
+        j = len(tabb) - 1
+        aux = 0
+        fini = 0
+        while fini == 0:
+            fini = 1
+            i = 0
+            while i <= j:  # while (i < j)
+                if tabb[i] > tabb[i + 1]:
+                    aux = tabb[i]
+                    tabb[i] = tabb[i + 1]
+                    tabb[i + 1] = aux
+                    fini = 0
+                i = i + 1
+            j = j - 1
+        cpt = 0
+        for k in range(len(tab) - 1):
+            if tabb[k] > tabb[k + 1]:
+                cpt = cpt + 1
+        return cpt
+    
+class BubbleSortTest(unittest.TestCase):
+    def test_0(self):
+        result = BubbleSortWrongWhile1.bubble_sort([1, 2, 3, 4, 5])
+        self.assertEqual(result, 0)
+
+    def test_1(self):
+        result = BubbleSortWrongWhile1.bubble_sort([5, 4, 3, 2, 1])
+        self.assertEqual(result, 0)
+
+    def test_2(self):
+        result = BubbleSortWrongWhile1.bubble_sort([3, 2, 1, 4, 5])
+        self.assertEqual(result, 0)
+
+    def test_3(self):
+        result = BubbleSortWrongWhile1.bubble_sort([3, 3, 1, 2, 2])
+        self.assertEqual(result, 0)
+
+    def test_4(self):
+        result = BubbleSortWrongWhile1.bubble_sort([])
+        self.assertEqual(result, 0)
+
+    def test_5(self):
+        result = BubbleSortWrongWhile1.bubble_sort([1])
+        self.assertEqual(result, 0)
+
+    def test_6(self):
+        result = BubbleSortWrongWhile1.bubble_sort([2, 2, 2, 2, 2])
+        self.assertEqual(result, 0)
+
+    def test_7(self):
+        result = BubbleSortWrongWhile1.bubble_sort([1, 2, 3, 4, 4])
+        self.assertEqual(result, 0)
+
+    def test_8(self):
+        result = BubbleSortWrongWhile1.bubble_sort([4, 1, 3, 2, 5])
+        self.assertEqual(result, 0)
+
+if __name__ == '__main__':
+    unittest.main()
+"
+BubbleSortWrongIf.py,"
+import unittest
+class BubbleSortWrongIf:
+    @staticmethod
+    def bubble_sort(tab):
+        tabb = tab.copy()
+        i = 0
+        j = len(tabb) - 1
+        aux = 0
+        fini = 0
+        while fini == 0:
+            fini = 1
+            i = 0
+            while i < j:
+                if tabb[i + 1] > tabb[i]:  # if (tabb[i] > tabb[i+1])
+                    aux = tabb[i]
+                    tabb[i] = tabb[i + 1]
+                    tabb[i + 1] = aux
+                    fini = 0
+                i = i + 1
+            j = j - 1
+        cpt = 0
+        for k in range(len(tab) - 1):
+            if tabb[k] > tabb[k + 1]:
+                cpt = cpt + 1
+        return cpt
+
+class BubbleSortTest(unittest.TestCase):
+    def test_0(self):
+        result = BubbleSortWrongIf.bubble_sort([1, 2, 3, 4, 5])
+        self.assertEqual(result, 0)
+
+    def test_1(self):
+        result = BubbleSortWrongIf.bubble_sort([5, 4, 3, 2, 1])
+        self.assertEqual(result, 0)
+
+    def test_2(self):
+        result = BubbleSortWrongIf.bubble_sort([3, 2, 1, 4, 5])
+        self.assertEqual(result, 0)
+
+    def test_3(self):
+        result = BubbleSortWrongIf.bubble_sort([3, 3, 1, 2, 2])
+        self.assertEqual(result, 0)
+
+    def test_4(self):
+        result = BubbleSortWrongIf.bubble_sort([])
+        self.assertEqual(result, 0)
+
+    def test_5(self):
+        result = BubbleSortWrongIf.bubble_sort([1])
+        self.assertEqual(result, 0)
+
+    def test_6(self):
+        result = BubbleSortWrongIf.bubble_sort([2, 2, 2, 2, 2])
+        self.assertEqual(result, 0)
+
+    def test_7(self):
+        result = BubbleSortWrongIf.bubble_sort([1, 2, 3, 4, 4])
+        self.assertEqual(result, 0)
+
+    def test_8(self):
+        result = BubbleSortWrongIf.bubble_sort([4, 1, 3, 2, 5])
+        self.assertEqual(result, 0)
+
+if __name__ == '__main__':
+    unittest.main()
+"
+BubbleSort3.py,"
+import unittest
+class BubbleSort3:
+    @staticmethod
+    def bubble_sort(tab):
+        tabb = tab.copy()
+        i = 0
+        j = len(tabb) - 1
+        aux = 0
+        fini = 0
+        while fini == 0:
+            fini = 1
+            i = 0
+            while i < j:
+                if tabb[i] > tabb[i + 1]:
+                    aux = tabb[i]
+                    tabb[i] = tabb[i + 1]
+                    tabb[i + 1] = aux
+                    fini = 0
+                i = i - 1  # i = i + 1
+            j = j - 1
+        cpt = 0
+        for k in range(len(tab) - 1):
+            if tabb[k] > tabb[k + 1]:
+                cpt = cpt + 1
+        return cpt
+    
+class TestBubbleSort4(unittest.TestCase):
+    def test_0(self):
+        result = BubbleSort3.bubble_sort([1, 2, 3, 4, 5])
+        self.assertEqual(result, 0)
+
+    def test_1(self):
+        result = BubbleSort3.bubble_sort([5, 4, 3, 2, 1])
+        self.assertEqual(result, 0)
+
+    def test_2(self):
+        result = BubbleSort3.bubble_sort([3, 2, 1, 4, 5])
+        self.assertEqual(result, 0)
+
+    def test_3(self):
+        result = BubbleSort3.bubble_sort([3, 3, 1, 2, 2])
+        self.assertEqual(result, 0)
+
+    def test_4(self):
+        result = BubbleSort3.bubble_sort([])
+        self.assertEqual(result, 0)
+
+    def test_5(self):
+        result = BubbleSort3.bubble_sort([1])
+        self.assertEqual(result, 0)
+
+    def test_6(self):
+        result = BubbleSort3.bubble_sort([2, 2, 2, 2, 2])
+        self.assertEqual(result, 0)
+
+    def test_7(self):
+        result = BubbleSort3.bubble_sort([1, 2, 3, 4, 4])
+        self.assertEqual(result, 0)
+
+    def test_8(self):
+        result = BubbleSort3.bubble_sort([4, 1, 3, 2, 5])
+        self.assertEqual(result, 0)
+
+if __name__ == '__main__':
+    unittest.main()
+"
+BubbleSortWrongWhile2.py,"import unittest
+
+class BubbleSortWrongWhile2:
+    @staticmethod
+    def bubble_sort(tab):
+        tabb = tab.copy()
+        i = 0
+        j = len(tabb) - 1
+        aux = 0
+        fini = 0
+        while fini == 1:  # while (fini == 0)
+            fini = 1
+            i = 0
+            while i < j:
+                if tabb[i] > tabb[i + 1]:
+                    aux = tabb[i]
+                    tabb[i] = tabb[i + 1]
+                    tabb[i + 1] = aux
+                    fini = 0
+                i = i + 1
+            j = j - 1
+        cpt = 0
+        for k in range(len(tab) - 1):
+            if tabb[k] > tabb[k + 1]:
+                cpt = cpt + 1
+        return cpt
+
+class BubbleSortTest(unittest.TestCase):
+    def test_0(self):
+        result = BubbleSortWrongWhile2.bubble_sort([1, 2, 3, 4, 5])
+        self.assertEqual(result, 0)
+
+    def test_1(self):
+        result = BubbleSortWrongWhile2.bubble_sort([5, 4, 3, 2, 1])
+        self.assertEqual(result, 0)
+
+    def test_2(self):
+        result = BubbleSortWrongWhile2.bubble_sort([3, 2, 1, 4, 5])
+        self.assertEqual(result, 0)
+
+    def test_3(self):
+        result = BubbleSortWrongWhile2.bubble_sort([3, 3, 1, 2, 2])
+        self.assertEqual(result, 0)
+
+    def test_4(self):
+        result = BubbleSortWrongWhile2.bubble_sort([])
+        self.assertEqual(result, 0)
+
+    def test_5(self):
+        result = BubbleSortWrongWhile2.bubble_sort([1])
+        self.assertEqual(result, 0)
+
+    def test_6(self):
+        result = BubbleSortWrongWhile2.bubble_sort([2, 2, 2, 2, 2])
+        self.assertEqual(result, 0)
+
+    def test_7(self):
+        result = BubbleSortWrongWhile2.bubble_sort([1, 2, 3, 4, 4])
+        self.assertEqual(result, 0)
+
+    def test_8(self):
+        result = BubbleSortWrongWhile2.bubble_sort([4, 1, 3, 2, 5])
+        self.assertEqual(result, 0)
+
+if __name__ == '__main__':
+    unittest.main() "
+BubbleSort2.py,"
+import unittest
+class BubbleSort2:
+    @staticmethod
+    def bubble_sort(tab):
+        tabb = tab.copy()
+        i = 0
+        j = len(tabb)  # int j = tabb.length - 1
+        aux = 0
+        fini = 0
+        while fini == 0:
+            fini = 1
+            i = 0
+            while i < j:
+                if tabb[i] > tabb[i + 1]:
+                    aux = tabb[i]
+                    tabb[i] = tabb[i + 1]
+                    tabb[i + 1] = aux
+                    fini = 0
+                i = i + 1
+            j = j - 1
+        cpt = 0
+        for k in range(len(tab) - 1):
+            if tabb[k] > tabb[k + 1]:
+                cpt = cpt + 1
+        return cpt
+    
+class TestBubbleSort4(unittest.TestCase):
+    def test_0(self):
+        result = BubbleSort2.bubble_sort([1, 2, 3, 4, 5])
+        self.assertEqual(result, 0)
+
+    def test_1(self):
+        result = BubbleSort2.bubble_sort([5, 4, 3, 2, 1])
+        self.assertEqual(result, 0)
+
+    def test_2(self):
+        result = BubbleSort2.bubble_sort([3, 2, 1, 4, 5])
+        self.assertEqual(result, 0)
+
+    def test_3(self):
+        result = BubbleSort2.bubble_sort([3, 3, 1, 2, 2])
+        self.assertEqual(result, 0)
+
+    def test_4(self):
+        result = BubbleSort2.bubble_sort([])
+        self.assertEqual(result, 0)
+
+    def test_5(self):
+        result = BubbleSort2.bubble_sort([1])
+        self.assertEqual(result, 0)
+
+    def test_6(self):
+        result = BubbleSort2.bubble_sort([2, 2, 2, 2, 2])
+        self.assertEqual(result, 0)
+
+    def test_7(self):
+        result = BubbleSort2.bubble_sort([1, 2, 3, 4, 4])
+        self.assertEqual(result, 0)
+
+    def test_8(self):
+        result = BubbleSort2.bubble_sort([4, 1, 3, 2, 5])
+        self.assertEqual(result, 0)
+
+if __name__ == '__main__':
+    unittest.main()
+"
+BubbleSort.py,"
+import unittest
+
+class BubbleSort:
+    @staticmethod
+    def bubble_sort(tab):
+        tabb = tab.copy()
+        i = 0
+        j = len(tabb) - 1
+        aux = 0
+        fini = 0
+        while fini == 0:
+            fini = 1
+            i = 1  # i = 0 
+            while i < j:
+                if tabb[i] > tabb[i + 1]:
+                    aux = tabb[i]
+                    tabb[i] = tabb[i + 1]
+                    tabb[i + 1] = aux
+                    fini = 0
+                i = i + 1
+            j = j - 1
+        cpt = 0
+        for k in range(len(tabb) - 1):
+            if tabb[k] > tabb[k + 1]:
+                cpt = cpt + 1
+        return cpt
+
+class TestBubbleSort4(unittest.TestCase):
+    def test_0(self):
+        result = BubbleSort.bubble_sort([1, 2, 3, 4, 5])
+        self.assertEqual(result, 0)
+
+    def test_1(self):
+        result = BubbleSort.bubble_sort([5, 4, 3, 2, 1])
+        self.assertEqual(result, 0)
+
+    def test_2(self):
+        result = BubbleSort.bubble_sort([3, 2, 1, 4, 5])
+        self.assertEqual(result, 0)
+
+    def test_3(self):
+        result = BubbleSort.bubble_sort([3, 3, 1, 2, 2])
+        self.assertEqual(result, 0)
+
+    def test_4(self):
+        result = BubbleSort.bubble_sort([])
+        self.assertEqual(result, 0)
+
+    def test_5(self):
+        result = BubbleSort.bubble_sort([1])
+        self.assertEqual(result, 0)
+
+    def test_6(self):
+        result = BubbleSort.bubble_sort([2, 2, 2, 2, 2])
+        self.assertEqual(result, 0)
+
+    def test_7(self):
+        result = BubbleSort.bubble_sort([1, 2, 3, 4, 4])
+        self.assertEqual(result, 0)
+
+    def test_8(self):
+        result = BubbleSort.bubble_sort([4, 1, 3, 2, 5])
+        self.assertEqual(result, 0)
+
+if __name__ == '__main__':
+    unittest.main()
+"
+Maxmin6varWrongIf1.py,"import unittest
+
+class Maxmin6varWrongIf1:
+    @staticmethod
+    def maxmin(a, b, c, d, e, f):
+        if a > b and a > c and a > d and a > e and a > f:
+            max = a
+            if b < c and b < d and b < e and b < f:
+                min = b
+            elif c < d and c < e and c < f:
+                min = c
+            elif d < e and d < f:
+                min = d
+            elif e > f:  # e < f
+                min = e
+            else:
+                min = f
+        elif b > c and b > d and b > e and b > f:
+            max = b
+            if a < c and a < d and a < e and a < f:
+                min = a
+            elif c < d and c < e and c < f:
+                min = c
+            elif d < e and d < f:
+                min = d
+            elif e < f:
+                min = e
+            else:
+                min = f
+        elif c > d and c > e and c > f:
+            max = c
+            if a < b and a < d and a < e and a < f:
+                min = a
+            elif b < d and b < e and b < f:
+                min = b
+            elif d < e and d < f:
+                min = d
+            elif e < f:
+                min = e
+            else:
+                min = f
+        elif d > e and d > f:
+            max = d
+            if a < b and a < c and a < e and a < f:
+                min = a
+            elif b < c and b < e and b < f:
+                min = b
+            elif c < e and c < f:
+                min = c
+            elif e < f:
+                min = e
+            else:
+                min = f
+        elif e > f:
+            max = e
+            if a < b and a < c and a < d and a < f:
+                min = a
+            elif b < c and b < d and b < f:
+                min = b
+            elif c < d and c < f:
+                min = c
+            elif d < f:
+                min = d
+            else:
+                min = f
+        else:
+            max = f
+            if a < b and a < c and a < d and a < e:
+                min = a
+            elif b < c and b < d and b < e:
+                min = b
+            elif c < d and c < e:
+                min = c
+            elif d < e:
+                min = d
+            else:
+                min = e
+        return min
+    
+class Maxmin6varTest(unittest.TestCase):
+    def test_0(self):
+        result = Maxmin6varWrongIf1.maxmin(1, 1, 1, 1, 1, 1)
+        self.assertEqual(1, result)
+
+    def test_1(self):
+        result = Maxmin6varWrongIf1.maxmin(10, 5, 3, 2, 1, 4)
+        self.assertEqual(5, result)
+
+    def test_2(self):
+        result = Maxmin6varWrongIf1.maxmin(5, 10, 3, 2, 1, 4)
+        self.assertEqual(5, result)
+
+    def test_3(self):
+        result = Maxmin6varWrongIf1.maxmin(3, 5, 10, 2, 1, 4)
+        self.assertEqual(3, result)
+
+    def test_4(self):
+        result = Maxmin6varWrongIf1.maxmin(1, 2, 3, 10, 5, 4)
+        self.assertEqual(1, result)
+
+    def test_5(self):
+        result = Maxmin6varWrongIf1.maxmin(1, 2, 3, 4, 5, 10)
+        self.assertEqual(4, result)
+
+    def test_6(self):
+        result = Maxmin6varWrongIf1.maxmin(10, 2, 3, 4, 5, 1)
+        self.assertEqual(1, result)
+
+    def test_7(self):
+        result = Maxmin6varWrongIf1.maxmin(3, 2, 10, 4, 5, 1)
+        self.assertEqual(3, result)
+
+    def test_8(self):
+        result = Maxmin6varWrongIf1.maxmin(10, 2, 3, 5, 4, 1)
+        self.assertEqual(1, result)
+
+
+if __name__ == '__main__':
+    unittest.main()"
+Maxmin6varWrongIf2.py,"
+import unittest
+
+class Maxmin6varWrongIf2:
+    @staticmethod
+    def maxmin(a, b, c, d, e, f):
+        if a > b and a > c and b > d and a > e and a > f:
+            max = a
+            if b < c and b < d and b < e and b < f:
+                min = b
+            elif c < d and c < e and c < f:
+                min = c
+            elif d < e and d < f:
+                min = d
+            elif e < f:
+                min = e
+            else:
+                min = f
+        elif b > c and b > d and b > e and b > f:
+            max = b
+            if a < c and a < d and a < e and a < f:
+                min = a
+            elif c < d and c < e and c < f:
+                min = c
+            elif d < e and d < f:
+                min = d
+            elif e < f:
+                min = e
+            else:
+                min = f
+        elif c > d and c > e and c > f:
+            max = c
+            if a < b and a < d and a < e and a < f:
+                min = a
+            elif b < d and b < e and b < f:
+                min = b
+            elif d < e and d < f:
+                min = d
+            elif e < f:
+                min = e
+            else:
+                min = f
+        elif d > e and d > f:
+            max = d
+            if a < b and a < c and a < e and a < f:
+                min = a
+            elif b < c and b < e and b < f:
+                min = b
+            elif c < e and c < f:
+                min = c
+            elif e < f:
+                min = e
+            else:
+                min = f
+        elif e > f:
+            max = e
+            if a < b and a < c and a < d and a < f:
+                min = a
+            elif b < c and b < d and b < f:
+                min = b
+            elif c < d and c < f:
+                min = c
+            elif d < f:
+                min = d
+            else:
+                min = f
+        else:
+            max = f
+            if a < b and a < c and a < d and a < e:
+                min = a
+            elif b < c and b < d and b < e:
+                min = b
+            elif c < d and c < e:
+                min = c
+            elif d < e:
+                min = d
+            else:
+                min = e
+        return max
+    
+class TestMaxmin6varWrongIf2(unittest.TestCase):
+    def test_0(self):
+        result = Maxmin6varWrongIf2.maxmin(1, 2, 3, 4, 5, 6)
+        self.assertEqual(result, 6)
+
+    def test_1(self):
+        result = Maxmin6varWrongIf2.maxmin(10, 9, 8, 7, 6, 5)
+        self.assertEqual(result, 10)
+
+    def test_2(self):
+        result = Maxmin6varWrongIf2.maxmin(-1, -2, -3, -4, -5, -6)
+        self.assertEqual(result, -1)
+
+    def test_3(self):
+        result = Maxmin6varWrongIf2.maxmin(0, 0, 0, 0, 0, 0)
+        self.assertEqual(result, 0)
+
+    def test_4(self):
+        result = Maxmin6varWrongIf2.maxmin(1, 1, 1, 1, 1, 2)
+        self.assertEqual(result, 2)
+
+    def test_5(self):
+        result = Maxmin6varWrongIf2.maxmin(1, 2, 3, 4, 4, 4)
+        self.assertEqual(result, 4)
+
+    def test_6(self):
+        result = Maxmin6varWrongIf2.maxmin(5, 5, 5, 5, 5, 5)
+        self.assertEqual(result, 5)
+
+    def test_7(self):
+        result = Maxmin6varWrongIf2.maxmin(-10, 10, -20, 20, -30, 30)
+        self.assertEqual(result, 30)
+
+    def test_8(self):
+        result = Maxmin6varWrongIf2.maxmin(100, 200, 300, 400, 500, 600)
+        self.assertEqual(result, 600)
+
+if __name__ == '__main__':
+    unittest.main()
+"
+Maxmin6varWrongIf3.py,"import unittest
+
+class Maxmin6varWrongIf3:
+    @staticmethod
+    def maxmin(a, b, c, d, e, f):
+        if a > b and a > c and a > d and a > e and a > f:
+            max = a
+            if b < c and b < d and b < e and b < f:
+                min = b
+            elif c < d and c < e and c < f:
+                min = c
+            elif d < e and d < f:
+                min = d
+            elif e < f:
+                min = e
+            else:
+                min = f
+        elif b > c and b > d and b > e and b > f:
+            max = b
+            if a < c and a < e and a < f:  # a < c and a < d and a < e and a < f
+                min = a
+            elif c < d and c < e and c < f:
+                min = c
+            elif d < e and d < f:
+                min = d
+            elif e < f:
+                min = e
+            else:
+                min = f
+        elif c > d and c > e and c > f:
+            max = c
+            if a < b and a < d and a < e and a < f:
+                min = a
+            elif b < d and b < e and b < f:
+                min = b
+            elif d < e and d < f:
+                min = d
+            elif e < f:
+                min = e
+            else:
+                min = f
+        elif d > e and d > f:
+            max = d
+            if a < b and a < c and a < e and a < f:
+                min = a
+            elif b < c and b < e and b < f:
+                min = b
+            elif c < e and c < f:
+                min = c
+            elif e < f:
+                min = e
+            else:
+                min = f
+        elif e > f:
+            max = e
+            if a < b and a < c and a < d and a < f:
+                min = a
+            elif b < c and b < d and b < f:
+                min = b
+            elif c < d and c < f:
+                min = c
+            elif d < f:
+                min = d
+            else:
+                min = f
+        else:
+            max = f
+            if a < b and a < c and a < d and a < e:
+                min = a
+            elif b < c and b < d and b < e:
+                min = b
+            elif c < d and c < e:
+                min = c
+            elif d < e:
+                min = d
+            else:
+                min = e
+        return min
+    
+class Maxmin6varTest(unittest.TestCase):
+    def test_0(self):
+        result = Maxmin6varWrongIf3.maxmin(1, 1, 1, 1, 1, 1)
+        self.assertEqual(1, result)
+
+    def test_1(self):
+        result = Maxmin6varWrongIf3.maxmin(10, 5, 3, 2, 1, 4)
+        self.assertEqual(5, result)
+
+    def test_2(self):
+        result = Maxmin6varWrongIf3.maxmin(5, 10, 3, 2, 1, 4)
+        self.assertEqual(5, result)
+
+    def test_3(self):
+        result = Maxmin6varWrongIf3.maxmin(3, 5, 10, 2, 1, 4)
+        self.assertEqual(3, result)
+
+    def test_4(self):
+        result = Maxmin6varWrongIf3.maxmin(1, 2, 3, 10, 5, 4)
+        self.assertEqual(1, result)
+
+    def test_5(self):
+        result = Maxmin6varWrongIf3.maxmin(1, 2, 3, 4, 5, 10)
+        self.assertEqual(4, result)
+
+    def test_6(self):
+        result = Maxmin6varWrongIf3.maxmin(10, 2, 3, 4, 5, 1)
+        self.assertEqual(1, result)
+
+    def test_7(self):
+        result = Maxmin6varWrongIf3.maxmin(3, 2, 10, 4, 5, 1)
+        self.assertEqual(3, result)
+
+    def test_8(self):
+        result = Maxmin6varWrongIf3.maxmin(10, 2, 3, 5, 4, 1)
+        self.assertEqual(1, result)
+
+
+if __name__ == '__main__':
+    unittest.main()"
+BSearchWrongWhile.py,"
+import unittest
+
+class BSearchWrongWhile:
+    @staticmethod
+    def search(tab, x):
+        result = -1
+        milieu = 0
+        gauche = 0
+        droite = len(tab) - 1
+        while result == -1 or gauche <= droite: # Changer or en and
+            milieu = (gauche + droite) // 2
+            if tab[milieu] == x:
+                result = milieu
+            elif tab[milieu] > x:
+                droite = milieu - 1
+            else:
+                gauche = milieu + 1
+        return result
+
+
+class BSearchTest(unittest.TestCase):
+    def test_0(self):
+        tab = [i for i in range(5)]
+        result = BSearchWrongWhile.search(tab, 0)
+        self.assertEqual(0, result)
+
+    def test_1(self):
+        tab2 = [5, 10, 16, 24, 30]
+        result = BSearchWrongWhile.search(tab2, 10)
+        self.assertEqual(1, result)
+
+    def test_2(self):
+        tab3 = [15, 15, 16, 42, 50]
+        result = BSearchWrongWhile.search(tab3, 16)
+        self.assertEqual(2, result)
+
+    def test_3(self):
+        tab4 = [17, 18, 19, 42, 61]
+        result = BSearchWrongWhile.search(tab4, 42)
+        self.assertEqual(3, result)
+
+    def test_4(self):
+        tab5 = [11, 14, 15, 18, 21]
+        result = BSearchWrongWhile.search(tab5, 21)
+        self.assertEqual(4, result)
+
+    def test_5(self):
+        tab6 = [15, 23, 65, 70, 85]
+        result = BSearchWrongWhile.search(tab6, 61)
+        self.assertEqual(-1, result)
+
+    def test_6(self):
+        tab7 = [14, 21, 33, 42, 55]
+        result = BSearchWrongWhile.search(tab7, 21)
+        self.assertEqual(1, result)
+
+    def test_7(self):
+        tab8 = [14, 21, 33, 42, 55, 77, 100, 120]
+        result = BSearchWrongWhile.search(tab8, 55)
+        self.assertEqual(4, result)
+
+    def test_8(self):
+        tab9 = [14, 21, 33, 42, 55, 77, 100, 120]
+        result = BSearchWrongWhile.search(tab9, 33)
+        self.assertEqual(2, result)
+
+if __name__ == '__main__':
+    unittest.main()
+
+"
+BSearchWrongIf2.py,"import unittest
+
+class BSearchWrongIf2:
+    @staticmethod
+    def search(tab, x):
+        result = -1
+        milieu = 0
+        gauche = 0
+        droite = len(tab) - 1
+        while result == -1 and gauche <= droite:
+            milieu = (gauche + droite) // 2
+            if tab[milieu] > x:  # Correction: tab[milieu] == x
+                result = milieu
+            elif tab[milieu] > x:
+                droite = milieu - 1
+            else:
+                gauche = milieu + 1
+        return result
+
+class BSearchTest(unittest.TestCase):
+    def test_0(self):
+        tab = [i for i in range(5)]
+        result = BSearchWrongIf2.search(tab, 0)
+        self.assertEqual(0, result)
+
+    def test_1(self):
+        tab2 = [5, 10, 16, 24, 30]
+        result = BSearchWrongIf2.search(tab2, 10)
+        self.assertEqual(1, result)
+
+    def test_2(self):
+        tab3 = [15, 15, 16, 42, 50]
+        result = BSearchWrongIf2.search(tab3, 16)
+        self.assertEqual(2, result)
+
+    def test_3(self):
+        tab4 = [17, 18, 19, 42, 61]
+        result = BSearchWrongIf2.search(tab4, 42)
+        self.assertEqual(3, result)
+
+    def test_4(self):
+        tab5 = [11, 14, 15, 18, 21]
+        result = BSearchWrongIf2.search(tab5, 21)
+        self.assertEqual(4, result)
+
+    def test_5(self):
+        tab6 = [15, 23, 65, 70, 85]
+        result = BSearchWrongIf2.search(tab6, 61)
+        self.assertEqual(-1, result)
+
+    def test_6(self):
+        tab7 = [14, 21, 33, 42, 55]
+        result = BSearchWrongIf2.search(tab7, 21)
+        self.assertEqual(1, result)
+
+    def test_7(self):
+        tab8 = [14, 21, 33, 42, 55, 77, 100, 120]
+        result = BSearchWrongIf2.search(tab8, 55)
+        self.assertEqual(4, result)
+
+    def test_8(self):
+        tab9 = [14, 21, 33, 42, 55, 77, 100, 120]
+        result = BSearchWrongIf2.search(tab9, 33)
+        self.assertEqual(2, result)
+
+
+if __name__ == '__main__':
+    unittest.main()"
+BSearchWrongIf1.py,"import unittest
+class BSearchWrongIf1:
+    @staticmethod
+    def search(tab, x):
+        result = -1
+        milieu = 0
+        gauche = 0
+        droite = len(tab) - 1
+        while result == -1 and gauche <= droite:
+            milieu = (gauche + droite) // 2
+            if tab[milieu] == x:
+                result = milieu
+            elif tab[milieu] < x:  # Correction: tab[milieu] > x
+                droite = milieu - 1
+            else:
+                gauche = milieu + 1
+        return result
+
+class BSearchTest(unittest.TestCase):
+    def test_0(self):
+        tab = [i for i in range(5)]
+        result = BSearchWrongIf1.search(tab, 0)
+        self.assertEqual(0, result)
+
+    def test_1(self):
+        tab2 = [5, 10, 16, 24, 30]
+        result = BSearchWrongIf1.search(tab2, 10)
+        self.assertEqual(1, result)
+
+    def test_2(self):
+        tab3 = [15, 15, 16, 42, 50]
+        result = BSearchWrongIf1.search(tab3, 16)
+        self.assertEqual(2, result)
+
+    def test_3(self):
+        tab4 = [17, 18, 19, 42, 61]
+        result = BSearchWrongIf1.search(tab4, 42)
+        self.assertEqual(3, result)
+
+    def test_4(self):
+        tab5 = [11, 14, 15, 18, 21]
+        result = BSearchWrongIf1.search(tab5, 21)
+        self.assertEqual(4, result)
+
+    def test_5(self):
+        tab6 = [15, 23, 65, 70, 85]
+        result = BSearchWrongIf1.search(tab6, 61)
+        self.assertEqual(-1, result)
+
+    def test_6(self):
+        tab7 = [14, 21, 33, 42, 55]
+        result = BSearchWrongIf1.search(tab7, 21)
+        self.assertEqual(1, result)
+
+    def test_7(self):
+        tab8 = [14, 21, 33, 42, 55, 77, 100, 120]
+        result = BSearchWrongIf1.search(tab8, 55)
+        self.assertEqual(4, result)
+
+    def test_8(self):
+        tab9 = [14, 21, 33, 42, 55, 77, 100, 120]
+        result = BSearchWrongIf1.search(tab9, 33)
+        self.assertEqual(2, result)
+
+
+if __name__ == '__main__':
+    unittest.main()"
+BSearch.py,"import unittest
+
+class BSearch:
+    @staticmethod
+    def search(tab, x):
+        result = -1
+        milieu = 0
+        gauche = 0
+        droite = len(tab) - 1
+        while (result == -1) and (gauche <= droite):
+            milieu = (gauche + droite) // 2
+            if tab[milieu] == x:
+                result = droite  # error: the instruction should be result = milieu;
+            elif tab[milieu] > x:
+                droite = milieu - 1
+            else:
+                gauche = milieu + 1
+        return result
+    
+class BSearchTest(unittest.TestCase):
+    def test_0(self):
+        tab = [i for i in range(5)]
+        result = BSearch.search(tab, 0)
+        self.assertEqual(0, result)
+
+    def test_1(self):
+        tab2 = [5, 10, 16, 24, 30]
+        result = BSearch.search(tab2, 10)
+        self.assertEqual(1, result)
+
+    def test_2(self):
+        tab3 = [15, 15, 16, 42, 50]
+        result = BSearch.search(tab3, 16)
+        self.assertEqual(2, result)
+
+    def test_3(self):
+        tab4 = [17, 18, 19, 42, 61]
+        result = BSearch.search(tab4, 42)
+        self.assertEqual(3, result)
+
+    def test_4(self):
+        tab5 = [11, 14, 15, 18, 21]
+        result = BSearch.search(tab5, 21)
+        self.assertEqual(4, result)
+
+    def test_5(self):
+        tab6 = [15, 23, 65, 70, 85]
+        result = BSearch.search(tab6, 61)
+        self.assertEqual(-1, result)
+
+    def test_6(self):
+        tab7 = [14, 21, 33, 42, 55]
+        result = BSearch.search(tab7, 21)
+        self.assertEqual(1, result)
+
+    def test_7(self):
+        tab8 = [14, 21, 33, 42, 55, 77, 100, 120]
+        result = BSearch.search(tab8, 55)
+        self.assertEqual(4, result)
+
+    def test_8(self):
+        tab9 = [14, 21, 33, 42, 55, 77, 100, 120]
+        result = BSearch.search(tab9, 33)
+        self.assertEqual(2, result)
+        
+
+if __name__ == '__main__':
+    unittest.main()
+"
+BSearch2.py,"import unittest
+
+class BSearch2:
+    @staticmethod
+    def search(tab, x):
+        result = -1
+        milieu = 0
+        gauche = 0
+        droite = len(tab) - 1
+        while result == -1 and gauche <= droite:
+            milieu = (gauche + droite) // 2
+            if tab[milieu] == x:
+                result = milieu
+            elif tab[milieu] > x:
+                droite = milieu + 1 # droite = milieu - 1
+            else:
+                gauche = milieu + 1
+        return result
+
+class BSearchTest(unittest.TestCase):
+    def test_0(self):
+        tab = [i for i in range(5)]
+        result = BSearch2.search(tab, 0)
+        self.assertEqual(0, result)
+
+    def test_1(self):
+        tab2 = [5, 10, 16, 24, 30]
+        result = BSearch2.search(tab2, 10)
+        self.assertEqual(1, result)
+
+    def test_2(self):
+        tab3 = [15, 15, 16, 42, 50]
+        result = BSearch2.search(tab3, 16)
+        self.assertEqual(2, result)
+
+    def test_3(self):
+        tab4 = [17, 18, 19, 42, 61]
+        result = BSearch2.search(tab4, 42)
+        self.assertEqual(3, result)
+
+    def test_4(self):
+        tab5 = [11, 14, 15, 18, 21]
+        result = BSearch2.search(tab5, 21)
+        self.assertEqual(4, result)
+
+    def test_5(self):
+        tab6 = [15, 23, 65, 70, 85]
+        result = BSearch2.search(tab6, 61)
+        self.assertEqual(-1, result)
+
+    def test_6(self):
+        tab7 = [14, 21, 33, 42, 55]
+        result = BSearch2.search(tab7, 21)
+        self.assertEqual(1, result)
+
+    def test_7(self):
+        tab8 = [14, 21, 33, 42, 55, 77, 100, 120]
+        result = BSearch2.search(tab8, 55)
+        self.assertEqual(4, result)
+
+    def test_8(self):
+        tab9 = [14, 21, 33, 42, 55, 77, 100, 120]
+        result = BSearch2.search(tab9, 33)
+        self.assertEqual(2, result)
+
+if __name__ == '__main__':
+    unittest.main()"
+BSearch3.py,"import unittest
+
+class BSearch3:
+    @staticmethod
+    def search(tab, x):
+        result = -1
+        milieu = 0
+        gauche = 0
+        droite = len(tab) - 1
+        while result == -1 and gauche <= droite:
+            milieu = (gauche + droite) // 2
+            if tab[milieu] == x:
+                result = milieu
+            elif tab[milieu] > x:
+                droite = milieu - 1
+            else:
+                gauche = milieu - 1 #milieu + 1
+        return result
+
+class BSearchTest(unittest.TestCase):
+    def test_0(self):
+        tab = [i for i in range(5)]
+        result = BSearch3.search(tab, 0)
+        self.assertEqual(0, result)
+
+    def test_1(self):
+        tab2 = [5, 10, 16, 24, 30]
+        result = BSearch3.search(tab2, 10)
+        self.assertEqual(1, result)
+
+    def test_2(self):
+        tab3 = [15, 15, 16, 42, 50]
+        result = BSearch3.search(tab3, 16)
+        self.assertEqual(2, result)
+
+    def test_3(self):
+        tab4 = [17, 18, 19, 42, 61]
+        result = BSearch3.search(tab4, 42)
+        self.assertEqual(3, result)
+
+    def test_4(self):
+        tab5 = [11, 14, 15, 18, 21]
+        result = BSearch3.search(tab5, 21)
+        self.assertEqual(4, result)
+
+    def test_5(self):
+        tab6 = [15, 23, 65, 70, 85]
+        result = BSearch3.search(tab6, 61)
+        self.assertEqual(-1, result)
+
+    def test_6(self):
+        tab7 = [14, 21, 33, 42, 55]
+        result = BSearch3.search(tab7, 21)
+        self.assertEqual(1, result)
+
+    def test_7(self):
+        tab8 = [14, 21, 33, 42, 55, 77, 100, 120]
+        result = BSearch3.search(tab8, 55)
+        self.assertEqual(4, result)
+
+    def test_8(self):
+        tab9 = [14, 21, 33, 42, 55, 77, 100, 120]
+        result = BSearch3.search(tab9, 33)
+        self.assertEqual(2, result)
+    
+
+if __name__ == '__main__':
+    unittest.main()
+"
+Mid.py,"import unittest
+
+class Mid:
+    @staticmethod
+    def mid(a, b, c):
+        m = c
+
+        if b < c:
+            if a < b:
+                m = b
+            elif a < c:
+                m = b  # m = a;
+        else:
+            if a > b:
+                m = b
+            elif a > c:
+                m = a
+
+        return m
+    
+class MidTest(unittest.TestCase):
+    def test_0(self): # a is median
+        result = Mid.mid(5, 10, 7)
+        self.assertEqual(7, result)
+
+    def test_1(self): # b is median
+        result = Mid.mid(10, 5, 7)
+        self.assertEqual(7, result)
+
+    def test_2(self): # c is median
+        result = Mid.mid(5, 7, 10)
+        self.assertEqual(7, result)
+
+    def test_3(self): # a and b are smaller than c
+        result = Mid.mid(2, 3, 10)
+        self.assertEqual(3, result)
+
+    def test_4(self): # a and c are smaller than b
+        result = Mid.mid(2, 10, 3)
+        self.assertEqual(3, result)
+
+    def test_5(self): # b and c are smaller than a
+        result = Mid.mid(10, 2, 3)
+        self.assertEqual(3, result)
+
+    def test_6(self): # a, b, and c are equal
+        result = Mid.mid(5, 5, 5)
+        self.assertEqual(5, result)
+
+    def test_7(self): # a is smallest
+        result = Mid.mid(1, 5, 7)
+        self.assertEqual(5, result)
+
+    def test_8(self): # c is smallest
+        result = Mid.mid(7, 5, 1)
+        self.assertEqual(5, result)
+
+
+
+if __name__ == '__main__':
+    unittest.main()
+     "
+Mid2.py,"import unittest
+
+class Mid2:
+    @staticmethod
+    def mid(a, b, c):
+        m = c
+
+        if b < c:
+            if a < b:
+                m = a  # m = b;
+            elif a < c:
+                m = a
+        else:
+            if a > b:
+                m = b
+            elif a > c:
+                m = a
+
+        return m
+    
+class MidTest(unittest.TestCase):
+    def test_0(self): # a is median
+        result = Mid2.mid(5, 10, 7)
+        self.assertEqual(7, result)
+
+    def test_1(self): # b is median
+        result = Mid2.mid(10, 5, 7)
+        self.assertEqual(7, result)
+
+    def test_2(self): # c is median
+        result = Mid2.mid(5, 7, 10)
+        self.assertEqual(7, result)
+
+    def test_3(self): # a and b are smaller than c
+        result = Mid2.mid(2, 3, 10)
+        self.assertEqual(3, result)
+
+    def test_4(self): # a and c are smaller than b
+        result = Mid2.mid(2, 10, 3)
+        self.assertEqual(3, result)
+
+    def test_5(self): # b and c are smaller than a
+        result = Mid2.mid(10, 2, 3)
+        self.assertEqual(3, result)
+
+    def test_6(self): # a, b, and c are equal
+        result = Mid2.mid(5, 5, 5)
+        self.assertEqual(5, result)
+
+    def test_7(self): # a is smallest
+        result = Mid2.mid(1, 5, 7)
+        self.assertEqual(5, result)
+
+    def test_8(self): # c is smallest
+        result = Mid2.mid(7, 5, 1)
+        self.assertEqual(5, result)
+
+if __name__ == '__main__':
+    unittest.main() "
+Mid3.py,"import unittest
+
+class Mid3:
+    @staticmethod
+    def mid(a, b, c):
+        m = a  # m = c
+
+        if b < c:
+            if a < b:
+                m = b
+            elif a < c:
+                m = a
+        else:
+            if a > b:
+                m = b
+            elif a > c:
+                m = a
+
+        return m
+
+class MidTest(unittest.TestCase):
+    def test_0(self): 
+        result = Mid3.mid(5, 10, 7)
+        self.assertEqual(7, result)
+
+    def test_1(self): 
+        result = Mid3.mid(10, 5, 7)
+        self.assertEqual(7, result)
+
+    def test_2(self): 
+        result = Mid3.mid(5, 7, 10)
+        self.assertEqual(7, result)
+
+    def test_3(self): 
+        result = Mid3.mid(2, 3, 10)
+        self.assertEqual(3, result)
+
+    def test_4(self): 
+        result = Mid3.mid(2, 10, 3)
+        self.assertEqual(3, result)
+
+    def test_5(self): 
+        result = Mid3.mid(10, 2, 3)
+        self.assertEqual(3, result)
+
+    def test_6(self): 
+        result = Mid3.mid(5, 5, 5)
+        self.assertEqual(5, result)
+
+    def test_7(self): 
+        result = Mid3.mid(1, 5, 7)
+        self.assertEqual(5, result)
+
+    def test_8(self): 
+        result = Mid3.mid(7, 5, 1)
+        self.assertEqual(5, result)
+
+
+if __name__ == '__main__':
+    unittest.main()"
+Mid4.py,"
+import unittest
+
+class Mid4:
+    @staticmethod
+    def mid(a, b, c):
+        m = c
+
+        if b < c:
+            if a < b:
+                m = b
+            elif a < c:
+                m = a
+        else:
+            if a > b:
+                m = a  # m = b
+            elif a > c:
+                m = a
+
+        return m
+
+class MidTest(unittest.TestCase):
+    def test_0(self): # a is median
+        result = Mid4.mid(5, 10, 7)
+        self.assertEqual(7, result)
+
+    def test_1(self): # b is median
+        result = Mid4.mid(10, 5, 7)
+        self.assertEqual(7, result)
+
+    def test_2(self): # c is median
+        result = Mid4.mid(5, 7, 10)
+        self.assertEqual(7, result)
+
+    def test_3(self): # a and b are smaller than c
+        result = Mid4.mid(2, 3, 10)
+        self.assertEqual(3, result)
+
+    def test_4(self): # a and c are smaller than b
+        result = Mid4.mid(2, 10, 3)
+        self.assertEqual(3, result)
+
+    def test_5(self): # b and c are smaller than a
+        result = Mid4.mid(10, 2, 3)
+        self.assertEqual(3, result)
+
+    def test_6(self): # a, b, and c are equal
+        result = Mid4.mid(5, 5, 5)
+        self.assertEqual(5, result)
+
+    def test_7(self): # a is smallest
+        result = Mid4.mid(1, 5, 7)
+        self.assertEqual(5, result)
+
+    def test_8(self): # c is smallest
+        result = Mid4.mid(7, 5, 1)
+        self.assertEqual(5, result)
+
+
+if __name__ == '__main__':
+    unittest.main()"
+Mid5.py,"
+import unittest
+
+class Mid5:
+    @staticmethod
+    def mid(a, b, c):
+        m = c
+
+        if b < c:
+            if a < b:
+                m = b
+            elif a < c:
+                m = a
+        else:
+            if a > b:
+                m = b
+            elif a > c:
+                m = b  # m = a
+
+        return m
+
+class MidTest(unittest.TestCase):
+    def test_0(self): # a is median
+        result = Mid5.mid(5, 10, 7)
+        self.assertEqual(7, result)
+
+    def test_1(self): # b is median
+        result = Mid5.mid(10, 5, 7)
+        self.assertEqual(7, result)
+
+    def test_2(self): # c is median
+        result = Mid5.mid(5, 7, 10)
+        self.assertEqual(7, result)
+
+    def test_3(self): # a and b are smaller than c
+        result = Mid5.mid(2, 3, 10)
+        self.assertEqual(3, result)
+
+    def test_4(self): # a and c are smaller than b
+        result = Mid5.mid(2, 10, 3)
+        self.assertEqual(3, result)
+
+    def test_5(self): # b and c are smaller than a
+        result = Mid5.mid(10, 2, 3)
+        self.assertEqual(3, result)
+
+    def test_6(self): # a, b, and c are equal
+        result = Mid5.mid(5, 5, 5)
+        self.assertEqual(5, result)
+
+    def test_7(self): # a is smallest
+        result = Mid5.mid(1, 5, 7)
+        self.assertEqual(5, result)
+
+    def test_8(self): # c is smallest
+        result = Mid5.mid(7, 5, 1)
+        self.assertEqual(5, result)
+
+
+
+if __name__ == '__main__':
+    unittest.main()"
+MidWrongIf1.py,"""""""
+Finds the median of three variables.
+""""""
+import unittest
+
+class MidWrongIf1:
+    @staticmethod
+    def mid(a, b, c):
+        m = c
+
+        if b > c: # (b<c)
+            if a < b:
+                m = b
+            elif a < c:
+                m = a
+        else:
+            if a > b:
+                m = b
+            elif a > c:
+                m = a
+
+        return m
+
+class MidTest(unittest.TestCase):
+    def test_0(self): # a is median
+        result = MidWrongIf1.mid(5, 10, 7)
+        self.assertEqual(7, result)
+
+    def test_1(self): # b is median
+        result = MidWrongIf1.mid(10, 5, 7)
+        self.assertEqual(7, result)
+
+    def test_2(self): # c is median
+        result = MidWrongIf1.mid(5, 7, 10)
+        self.assertEqual(7, result)
+
+    def test_3(self): # a and b are smaller than c
+        result = MidWrongIf1.mid(2, 3, 10)
+        self.assertEqual(3, result)
+
+    def test_4(self): # a and c are smaller than b
+        result = MidWrongIf1.mid(2, 10, 3)
+        self.assertEqual(3, result)
+
+    def test_5(self): # b and c are smaller than a
+        result = MidWrongIf1.mid(10, 2, 3)
+        self.assertEqual(3, result)
+
+    def test_6(self): # a, b, and c are equal
+        result = MidWrongIf1.mid(5, 5, 5)
+        self.assertEqual(5, result)
+
+    def test_7(self): # a is smallest
+        result = MidWrongIf1.mid(1, 5, 7)
+        self.assertEqual(5, result)
+
+    def test_8(self): # c is smallest
+        result = MidWrongIf1.mid(7, 5, 1)
+        self.assertEqual(5, result)
+
+
+if __name__ == '__main__':
+    unittest.main()"
+MidWrongIf3.py,"""""""
+Finds the median of three variables.
+""""""
+import unittest
+
+class MidWrongIf3:
+    @staticmethod
+    def mid(a, b, c):
+        m = c
+
+        if b < c:
+            if a < b:
+                m = b
+            elif a < c:
+                m = a
+        else:
+            if a < b: # (a > b)
+                m = b
+            elif a > c:
+                m = a
+
+        return m
+
+class MidTest(unittest.TestCase):
+    def test_0(self): # a is median
+        result = MidWrongIf3.mid(5, 10, 7)
+        self.assertEqual(7, result)
+
+    def test_1(self): # b is median
+        result = MidWrongIf3.mid(10, 5, 7)
+        self.assertEqual(7, result)
+
+    def test_2(self): # c is median
+        result = MidWrongIf3.mid(5, 7, 10)
+        self.assertEqual(7, result)
+
+    def test_3(self): # a and b are smaller than c
+        result = MidWrongIf3.mid(2, 3, 10)
+        self.assertEqual(3, result)
+
+    def test_4(self): # a and c are smaller than b
+        result = MidWrongIf3.mid(2, 10, 3)
+        self.assertEqual(3, result)
+
+    def test_5(self): # b and c are smaller than a
+        result = MidWrongIf3.mid(10, 2, 3)
+        self.assertEqual(3, result)
+
+    def test_6(self): # a, b, and c are equal
+        result = MidWrongIf3.mid(5, 5, 5)
+        self.assertEqual(5, result)
+
+    def test_7(self): # a is smallest
+        result = MidWrongIf3.mid(1, 5, 7)
+        self.assertEqual(5, result)
+
+    def test_8(self): # c is smallest
+        result = MidWrongIf3.mid(7, 5, 1)
+        self.assertEqual(5, result)
+
+
+if __name__ == '__main__':
+    unittest.main()"
+MidWrongIf2.py,"""""""
+Finds the median of three variables.
+""""""
+import unittest
+
+class MidWrongIf2:
+    @staticmethod
+    def mid(a, b, c):
+        m = c
+
+        if b < c:
+            if a > b:  # a < b'
+                m = b
+            elif a < c:
+                m = a
+        else:
+            if a > b:
+                m = b
+            elif a > c:
+                m = a
+
+        return m
+
+class MidTest(unittest.TestCase):
+    def test_0(self): # a is median
+        result = MidWrongIf2.mid(5, 10, 7)
+        self.assertEqual(7, result)
+
+    def test_1(self): # b is median
+        result = MidWrongIf2.mid(10, 5, 7)
+        self.assertEqual(7, result)
+
+    def test_2(self): # c is median
+        result = MidWrongIf2.mid(5, 7, 10)
+        self.assertEqual(7, result)
+
+    def test_3(self): # a and b are smaller than c
+        result = MidWrongIf2.mid(2, 3, 10)
+        self.assertEqual(3, result)
+
+    def test_4(self): # a and c are smaller than b
+        result = MidWrongIf2.mid(2, 10, 3)
+        self.assertEqual(3, result)
+
+    def test_5(self): # b and c are smaller than a
+        result = MidWrongIf2.mid(10, 2, 3)
+        self.assertEqual(3, result)
+
+    def test_6(self): # a, b, and c are equal
+        result = MidWrongIf2.mid(5, 5, 5)
+        self.assertEqual(5, result)
+
+    def test_7(self): # a is smallest
+        result = MidWrongIf2.mid(1, 5, 7)
+        self.assertEqual(5, result)
+
+    def test_8(self): # c is smallest
+        result = MidWrongIf2.mid(7, 5, 1)
+        self.assertEqual(5, result)
+
+
+if __name__ == '__main__':
+    unittest.main()"
+MidWrongIf4.py,"
+import unittest
+
+class MidWrongIf4:
+    @staticmethod
+    def mid(a, b, c):
+        m = c
+
+        if b < c:
+            if a < b:
+                m = b
+            elif a > c:  # (a < c)
+                m = a
+        else:
+            if a > b:
+                m = b
+            elif a > c:
+                m = a
+
+        return m
+
+class MidTest(unittest.TestCase):
+    def test_0(self): # a is median
+        result = MidWrongIf4.mid(5, 10, 7)
+        self.assertEqual(7, result)
+
+    def test_1(self): # b is median
+        result = MidWrongIf4.mid(10, 5, 7)
+        self.assertEqual(7, result)
+
+    def test_2(self): # c is median
+        result = MidWrongIf4.mid(5, 7, 10)
+        self.assertEqual(7, result)
+
+    def test_3(self): # a and b are smaller than c
+        result = MidWrongIf4.mid(2, 3, 10)
+        self.assertEqual(3, result)
+
+    def test_4(self): # a and c are smaller than b
+        result = MidWrongIf4.mid(2, 10, 3)
+        self.assertEqual(3, result)
+
+    def test_5(self): # b and c are smaller than a
+        result = MidWrongIf4.mid(10, 2, 3)
+        self.assertEqual(3, result)
+
+    def test_6(self): # a, b, and c are equal
+        result = MidWrongIf4.mid(5, 5, 5)
+        self.assertEqual(5, result)
+
+    def test_7(self): # a is smallest
+        result = MidWrongIf4.mid(1, 5, 7)
+        self.assertEqual(5, result)
+
+    def test_8(self): # c is smallest
+        result = MidWrongIf4.mid(7, 5, 1)
+        self.assertEqual(5, result)
+
+
+if __name__ == '__main__':
+    unittest.main()
+"
+MidWrongIf5.py,"""""""
+Finds the median of three variables.
+""""""
+import unittest
+
+class MidWrongIf5:
+    @staticmethod
+    def mid(a, b, c):
+        m = c
+
+        if b < c:
+            if a < b:
+                m = b
+            elif a < c:
+                m = a
+        else:
+            if a > b:
+                m = b
+            elif a < c:  # (a > c)
+                m = a
+
+        return m
+
+class MidTest(unittest.TestCase):
+    def test_0(self): # a is median
+        result = Mid.mid(5, 10, 7)
+        self.assertEqual(7, result)
+
+    def test_1(self): # b is median
+        result = Mid.mid(10, 5, 7)
+        self.assertEqual(7, result)
+
+    def test_2(self): # c is median
+        result = Mid.mid(5, 7, 10)
+        self.assertEqual(7, result)
+
+    def test_3(self): # a and b are smaller than c
+        result = Mid.mid(2, 3, 10)
+        self.assertEqual(3, result)
+
+    def test_4(self): # a and c are smaller than b
+        result = Mid.mid(2, 10, 3)
+        self.assertEqual(3, result)
+
+    def test_5(self): # b and c are smaller than a
+        result = Mid.mid(10, 2, 3)
+        self.assertEqual(3, result)
+
+    def test_6(self): # a, b, and c are equal
+        result = Mid.mid(5, 5, 5)
+        self.assertEqual(5, result)
+
+    def test_7(self): # a is smallest
+        result = Mid.mid(1, 5, 7)
+        self.assertEqual(5, result)
+
+    def test_8(self): # c is smallest
+        result = Mid.mid(7, 5, 1)
+        self.assertEqual(5, result)
+
+
+if __name__ == '__main__':
+    unittest
+    test.main()"
+SquareRoot.py,"
+import unittest
+
+class SquareRoot:
+    @staticmethod
+    def squareRoot(val):
+        i = 1
+        v = 0
+        res = 0
+
+        while v < val:
+            v = v + 2 * i + 1
+            i = i + 1
+
+        # error: the instruction should be res = i - 1
+        res = i 
+        return res
+
+class SquareRootTest(unittest.TestCase):
+    def test_0(self):
+        result = SquareRoot.squareRoot(9)
+        self.assertEqual(result, 3)  # 3 is the integer square root of 9
+
+    def test_1(self):
+        result = SquareRoot.squareRoot(15)
+        self.assertEqual(result, 3)  # 3 is the integer square root of 15
+
+    def test_2(self):
+        result = SquareRoot.squareRoot(16)
+        self.assertEqual(result, 4)  # 4 is the integer square root of 16
+
+    def test_3(self):
+        result = SquareRoot.squareRoot(20)
+        self.assertEqual(result, 4)  # 4 is the integer square root of 20
+
+    def test_4(self):
+        result = SquareRoot.squareRoot(25)
+        self.assertEqual(result, 5)  # 5 is the integer square root of 25
+
+    def test_5(self):
+        result = SquareRoot.squareRoot(30)
+        self.assertEqual(result, 5)  # 5 is the integer square root of 30
+
+    def test_6(self):
+        result = SquareRoot.squareRoot(36)
+        self.assertEqual(result, 6)  # 6 is the integer square root of 36
+
+    def test_7(self):
+        result = SquareRoot.squareRoot(40)
+        self.assertEqual(result, 6)  # 6 is the integer square root of 40
+
+    def test_8(self):
+        result = SquareRoot.squareRoot(49)
+        self.assertEqual(result, 7)  # 7 is the integer square root of 49
+
+    def test_9(self):
+        result = SquareRoot.squareRoot(50)
+        self.assertEqual(result, 7)  # 7 is the integer square root of 50
+
+if __name__ == '__main__':
+    unittest.main()"
+SquareRoot2.py,"
+import unittest
+
+
+class SquareRoot2:
+
+    @staticmethod
+    def squareRoot(val):
+        i = 1
+        v = 10 + val
+        res = 0
+        while v < val:
+            v = v + 2 * i + 1
+            i = i + 1
+        res = i - 1
+        return res
+
+
+class SquareRootTest(unittest.TestCase):
+
+    def test_0(self):
+        result = SquareRoot2.squareRoot(9)
+        self.assertEqual(result, 3)
+
+    def test_1(self):
+        result = SquareRoot2.squareRoot(15)
+        self.assertEqual(result, 3)
+
+    def test_2(self):
+        result = SquareRoot2.squareRoot(16)
+        self.assertEqual(result, 4)
+
+    def test_3(self):
+        result = SquareRoot2.squareRoot(20)
+        self.assertEqual(result, 4)
+
+    def test_4(self):
+        result = SquareRoot2.squareRoot(25)
+        self.assertEqual(result, 5)
+
+    def test_5(self):
+        result = SquareRoot2.squareRoot(30)
+        self.assertEqual(result, 5)
+
+    def test_6(self):
+        result = SquareRoot2.squareRoot(36)
+        self.assertEqual(result, 6)
+
+    def test_7(self):
+        result = SquareRoot2.squareRoot(40)
+        self.assertEqual(result, 6)
+
+    def test_8(self):
+        result = SquareRoot2.squareRoot(49)
+        self.assertEqual(result, 7)
+
+    def test_9(self):
+        result = SquareRoot2.squareRoot(50)
+        self.assertEqual(result, 7)
+
+
+if __name__ == '__main__':
+    unittest.main()"
+SquareRoot3.py,"
+import unittest
+
+class SquareRoot3:
+    @staticmethod
+    def squareRoot(val):
+        i = 0  # i = 1;
+        v = 0
+        res = 0
+
+        while v < val:
+            v = v + 2 * i + 1
+            i = i + 1
+
+        res = i - 1
+
+        return res
+
+
+class SquareRootTest(unittest.TestCase):
+
+    def test_0(self):
+        result = SquareRoot3.squareRoot(9)
+        self.assertEqual(result, 3)
+
+    def test_1(self):
+        result = SquareRoot3.squareRoot(15)
+        self.assertEqual(result, 3)
+
+    def test_2(self):
+        result = SquareRoot3.squareRoot(16)
+        self.assertEqual(result, 4)
+
+    def test_3(self):
+        result = SquareRoot3.squareRoot(20)
+        self.assertEqual(result, 4)
+
+    def test_4(self):
+        result = SquareRoot3.squareRoot(25)
+        self.assertEqual(result, 5)
+
+    def test_5(self):
+        result = SquareRoot3.squareRoot(30)
+        self.assertEqual(result, 5)
+
+    def test_6(self):
+        result = SquareRoot3.squareRoot(36)
+        self.assertEqual(result, 6)
+
+    def test_7(self):
+        result = SquareRoot3.squareRoot(40)
+        self.assertEqual(result, 6)
+
+    def test_8(self):
+        result = SquareRoot3.squareRoot(49)
+        self.assertEqual(result, 7)
+
+    def test_9(self):
+        result = SquareRoot3.squareRoot(50)
+        self.assertEqual(result, 7)
+
+
+if __name__ == '__main__':
+    unittest.main()"
+SquareRoot4.py,"
+import unittest
+
+class SquareRoot4:
+    @staticmethod
+    def squareRoot(val):
+        i = 1
+        v = 0
+        res = 0
+
+        while v < val:
+            v = v + 2 * i + 1
+            i = i + 2  # i = i + 1;
+
+        res = i - 1
+        return res
+
+
+class SquareRootTest(unittest.TestCase):
+
+    def test_0(self):
+        result = SquareRoot4.squareRoot(9)
+        self.assertEqual(result, 3)
+
+    def test_1(self):
+        result = SquareRoot4.squareRoot(15)
+        self.assertEqual(result, 3)
+
+    def test_2(self):
+        result = SquareRoot4.squareRoot(16)
+        self.assertEqual(result, 4)
+
+    def test_3(self):
+        result = SquareRoot4.squareRoot(20)
+        self.assertEqual(result, 4)
+
+    def test_4(self):
+        result = SquareRoot4.squareRoot(25)
+        self.assertEqual(result, 5)
+
+    def test_5(self):
+        result = SquareRoot4.squareRoot(30)
+        self.assertEqual(result, 5)
+
+    def test_6(self):
+        result = SquareRoot4.squareRoot(36)
+        self.assertEqual(result, 6)
+
+    def test_7(self):
+        result = SquareRoot4.squareRoot(40)
+        self.assertEqual(result, 6)
+
+    def test_8(self):
+        result = SquareRoot4.squareRoot(49)
+        self.assertEqual(result, 7)
+
+    def test_9(self):
+        result = SquareRoot4.squareRoot(50)
+        self.assertEqual(result, 7)
+
+
+if __name__ == '__main__':
+    unittest.main()"
+SquareRoot5.py,"
+import unittest
+
+class SquareRoot5:
+    @staticmethod
+    def squareRoot(val):
+        i = 1
+        v = 0
+        res = 0
+
+        while v < val:
+            v = v + i + 1  # v = v + 2 * i + 1;
+            i = i + 1
+
+        res = i - 1
+        return res
+
+
+class SquareRootTest(unittest.TestCase):
+
+    def test_0(self):
+        result = SquareRoot5.squareRoot(9)
+        self.assertEqual(result, 3)
+
+    def test_1(self):
+        result = SquareRoot5.squareRoot(15)
+        self.assertEqual(result, 3)
+
+    def test_2(self):
+        result = SquareRoot5.squareRoot(16)
+        self.assertEqual(result, 4)
+
+    def test_3(self):
+        result = SquareRoot5.squareRoot(20)
+        self.assertEqual(result, 4)
+
+    def test_4(self):
+        result = SquareRoot5.squareRoot(25)
+        self.assertEqual(result, 5)
+
+    def test_5(self):
+        result = SquareRoot5.squareRoot(30)
+        self.assertEqual(result, 5)
+
+    def test_6(self):
+        result = SquareRoot5.squareRoot(36)
+        self.assertEqual(result, 6)
+
+    def test_7(self):
+        result = SquareRoot5.squareRoot(40)
+        self.assertEqual(result, 6)
+
+    def test_8(self):
+        result = SquareRoot5.squareRoot(49)
+        self.assertEqual(result, 7)
+
+    def test_9(self):
+        result = SquareRoot5.squareRoot(50)
+        self.assertEqual(result, 7)
+
+
+if __name__ == '__main__':
+    unittest.main()"
+SquareRootWrongWhile.py,"import unittest
+
+class SquareRootWrongWhile:
+    @staticmethod
+    def squareRoot(val):
+        i = 1
+        v = 0
+        res = 0
+
+        while v > val:  # (v < val)
+            v = v + 2 * i + 1
+            i = i + 1
+
+        res = i - 1
+        return res
+
+class SquareRootTest(unittest.TestCase):
+    def test_0(self):
+        result = SquareRootWrongWhile.squareRoot(9)
+        self.assertEqual(self.squareRoot(9), result)
+
+    def test_1(self):
+        result = SquareRootWrongWhile.squareRoot(15)
+        self.assertEqual(self.squareRoot(15), result)
+
+    def test_2(self):
+        result = SquareRootWrongWhile.squareRoot(16)
+        self.assertEqual(self.squareRoot(16), result)
+
+    def test_3(self):
+        result = SquareRootWrongWhile.squareRoot(20)
+        self.assertEqual(self.squareRoot(20), result)
+
+    def test_4(self):
+        result = SquareRootWrongWhile.squareRoot(25)
+        self.assertEqual(self.squareRoot(25), result)
+
+    def test_5(self):
+        result = SquareRootWrongWhile.squareRoot(30)
+        self.assertEqual(self.squareRoot(30), result)
+
+    def test_6(self):
+        result = SquareRootWrongWhile.squareRoot(36)
+        self.assertEqual(self.squareRoot(36), result)
+
+    def test_7(self):
+        result = SquareRootWrongWhile.squareRoot(40)
+        self.assertEqual(self.squareRoot(40), result)
+
+    def test_8(self):
+        result = SquareRootWrongWhile.squareRoot(49)
+        self.assertEqual(self.squareRoot(49), result)
+
+    def test_9(self):
+        result = SquareRootWrongWhile.squareRoot"
+TriMultPerimetre.py,"""""""
+    Program for triangle perimeter.
+    Returns:
+        i*j*k if (i, j, k) are the sides of any triangle.
+        i*i * j or 2*i+k or 2*j+i if (i, j, k) are the sides of an isosceles triangle.
+        i*i*i if (i, j, k) are the sides of an equilateral triangle.
+        -1 if (i, j, k) are not the sides of a triangle.
+    
+    ERROR: in assignment line 54
+    Returns 8 for (2,1,2) while it should return 4.
+""""""
+import unittest
+
+class TriMultPerimetre:
+    """"""
+        Requires:
+            ((i == 2) and (j == 1) and (k == 2))
+        Ensures:
+            res == 4
+    """"""
+    @staticmethod
+    def trimultperimetre(i, j, k):
+        trityp = 0
+        res = 0
+
+        if i == 0 or j == 0 or k == 0:
+            trityp = 4
+            res = -1
+        else:
+            trityp = 0
+            if i == j:
+                trityp = trityp + 1
+            if i == k:
+                trityp = trityp + 2
+            if j == k:
+                trityp = trityp + 3
+
+            if trityp == 0:
+                if (i + j) <= k or ((j + k) <= i or (i + k) <= j):
+                    trityp = 4
+                    res = -1
+                else:
+                    trityp = 1
+                    res = i * j * k
+            else:
+                if trityp > 3:
+                    res = i * i * i
+                else:
+                    if trityp == 1 and (i + j) > k:  # i==j
+                        res = i * i * k
+                    else:
+                        # error in the assignment: should be res = i*i*j
+                        if trityp == 2 and (i + k) > j:  # i==k
+                            res = i * i * k
+                        else:
+                            if trityp == 3 and (j + k) > i:  # j==k
+                                res = j * j * i
+                            else:
+                                res = -1
+        return res
+    
+class TriMultPerimetreTest(unittest.TestCase):
+    def test_0(self): # Sides form any triangle
+        result = TriMultPerimetre.trimultperimetre(3, 4, 5)
+        self.assertEqual(60, result)
+
+    def test_1(self): # Sides form an isosceles triangle with i == j
+        result = TriMultPerimetre.trimultperimetre(2, 2, 3)
+        self.assertEqual(12, result)
+
+    def test_2(self): # Sides form an isosceles triangle with i == k
+        result = TriMultPerimetre.trimultperimetre(2, 3, 2)
+        self.assertEqual(12, result)
+
+    def test_3(self): # Sides form an isosceles triangle with j == k
+        result = TriMultPerimetre.trimultperimetre(3, 2, 2)
+        self.assertEqual(12, result)
+
+    def test_4(self): # Sides form an equilateral triangle
+        result = TriMultPerimetre.trimultperimetre(2, 2, 2)
+        self.assertEqual(8, result)
+
+    def test_5(self): # Sides do not form a triangle
+        result = TriMultPerimetre.trimultperimetre(2, 1, 2)
+        self.assertEqual(4, result)  # Updated to reflect the corrected result
+
+    def test_6(self): # One side is 0
+        result = TriMultPerimetre.trimultperimetre(0, 2, 3)
+        self.assertEqual(-1, result)
+
+    def test_7(self): # Two sides are 0
+        result = TriMultPerimetre.trimultperimetre(0, 0, 3)
+        self.assertEqual(-1, result)
+
+    def test_8(self): # All sides are 0
+        result = TriMultPerimetre.trimultperimetre(0, 0, 0)
+        self.assertEqual(-1, result)
+
+
+if __name__ == '__main__':
+    unittest.main()"
+TriPerimetre.py,"""""""
+    Program for triangle perimeter.
+    Returns:
+        i+j+k if (i, j, k) are the sides of any triangle.
+        2*i + j or 2*i+k or 2*j+i if (i, j, k) are the sides of an isosceles triangle.
+        3*i if (i, j, k) are the sides of an equilateral triangle.
+        -1 if (i, j, k) are not the sides of a triangle.
+    
+    ERROR: in assignment line 54
+    Returns 6 for (2,1,2) while it should return 5.
+""""""
+import unittest
+
+class TriPerimetre:
+    """"""
+        Requires:
+            ((i == 2) and (j == 1) and (k == 2))
+        Ensures:
+            res == 5
+    """"""
+    @staticmethod
+    def triPerimetre(i, j, k):
+        trityp = 0
+        res = 0
+
+        if i == 0 or j == 0 or k == 0:
+            trityp = 4
+            res = -1
+        else:
+            trityp = 0
+            if i == j:
+                trityp = trityp + 1
+            if i == k:
+                trityp = trityp + 2
+            if j == k:
+                trityp = trityp + 3
+
+            if trityp == 0:
+                if (i + j) <= k or ((j + k) <= i or (i + k) <= j):
+                    trityp = 4
+                    res = -1
+                else:
+                    trityp = 1
+                    res = i + j + k
+            else:
+                if trityp > 3:
+                    res = 3 * i
+                else:
+                    if trityp == 1 and (i + j) > k:  # i==j
+                        res = 2 * i + k
+                    else:
+                        # error in the assignment: should be res = 2*i+j
+                        if trityp == 2 and (i + k) > j:  # i==k
+                            res = 2 * i + k
+                        else:
+                            if trityp == 3 and (j + k) > i:  # j==k
+                                res = 2 * j + i
+                            else:
+                                res = -1
+
+        return res
+
+class TriMultPerimetreTest(unittest.TestCase):
+    def test_0(self): # Sides form any triangle
+        result = TriMultPerimetre.trimultperimetre(3, 4, 5)
+        self.assertEqual(60, result)
+
+    def test_1(self): # Sides form an isosceles triangle with i == j
+        result = TriMultPerimetre.trimultperimetre(2, 2, 3)
+        self.assertEqual(12, result)
+
+    def test_2(self): # Sides form an isosceles triangle with i == k
+        result = TriMultPerimetre.trimultperimetre(2, 3, 2)
+        self.assertEqual(12, result)
+
+    def test_3(self): # Sides form an isosceles triangle with j == k
+        result = TriMultPerimetre.trimultperimetre(3, 2, 2)
+        self.assertEqual(12, result)
+
+    def test_4(self): # Sides form an equilateral triangle
+        result = TriMultPerimetre.trimultperimetre(2, 2, 2)
+        self.assertEqual(8, result)
+
+    def test_5(self): # Sides do not form a triangle
+        result = TriMultPerimetre.trimultperimetre(2, 1, 2)
+        self.assertEqual(4, result)  # Updated to reflect the corrected result
+
+    def test_6(self): # One side is 0
+        result = TriMultPerimetre.trimultperimetre(0, 2, 3)
+        self.assertEqual(-1, result)
+
+    def test_7(self): # Two sides are 0
+        result = TriMultPerimetre.trimultperimetre(0, 0, 3)
+        self.assertEqual(-1, result)
+
+    def test_8(self): # All sides are 0
+        result = TriMultPerimetre.trimultperimetre(0, 0, 0)
+        self.assertEqual(-1, result)
+
+
+
+if __name__ == '__main__':
+    unittest.main()"
+TriMultPerimetreWrongIf.py,"""""""
+    Program for triangle perimeter.
+    Returns:
+        i*j*k if (i, j, k) are the sides of any triangle.
+        i*i * j or 2*i+k or 2*j+i if (i, j, k) are the sides of an isosceles triangle.
+        i*i*i if (i, j, k) are the sides of an equilateral triangle.
+        -1 if (i, j, k) are not the sides of a triangle.
+    
+    ERROR in condition line 53: returns 2 for (1,2,1) while it should return -1.
+""""""
+import unittest
+
+class TriMultPerimetreWrongIf:
+    """"""
+        Requires:
+            ((i == 1) and (j == 2) and (k == 1))
+        Ensures:
+            res == -1
+    """"""
+    @staticmethod
+    def trimultperimetre(i, j, k):
+        trityp = 0
+        res = 0
+
+        if i == 0 or j == 0 or k == 0:
+            trityp = 4
+            res = -1
+        else:
+            trityp = 0
+            if i == j:
+                trityp = trityp + 1
+            if i == k:
+                trityp = trityp + 2
+            if j == k:
+                trityp = trityp + 3
+
+            if trityp == 0:
+                if (i + j) <= k or ((j + k) <= i or (i + k) <= j):
+                    trityp = 4
+                    res = -1
+                else:
+                    trityp = 1
+                    res = i * j * k
+            else:
+                if trityp > 3:
+                    res = i * i * i
+                else:
+                    if trityp == 1 and (i + j) > k:  # i==j
+                        res = i * i * k
+                    else:
+                        if trityp == 2:  # i==k
+                            # error in the condition: (i+j) > k instead of (i+k) > j
+                            if (i + j) > k:
+                                res = i * i * j
+                            else:
+                                res = -1
+                        else:
+                            if trityp == 3 and (j + k) > i:  # j==k
+                                res = j * j * i
+                            else:
+                                res = -1
+        return res
+
+class TriMultPerimetreTest(unittest.TestCase):
+    def test_0(self): # Sides form any triangle
+        result = TriMultPerimetreWrongIf.trimultperimetre(3, 4, 5)
+        self.assertEqual(60, result)
+
+    def test_1(self): # Sides form an isosceles triangle with i == j
+        result = TriMultPerimetreWrongIf.trimultperimetre(2, 2, 3)
+        self.assertEqual(12, result)
+
+    def test_2(self): # Sides form an isosceles triangle with i == k
+        result = TriMultPerimetreWrongIf.trimultperimetre(2, 3, 2)
+        self.assertEqual(12, result)
+
+    def test_3(self): # Sides form an isosceles triangle with j == k
+        result = TriMultPerimetreWrongIf.trimultperimetre(3, 2, 2)
+        self.assertEqual(12, result)
+
+    def test_4(self): # Sides form an equilateral triangle
+        result = TriMultPerimetreWrongIf.trimultperimetre(2, 2, 2)
+        self.assertEqual(8, result)
+
+    def test_5(self): # Sides do not form a triangle
+        result = TriMultPerimetreWrongIf.trimultperimetre(2, 1, 2)
+        self.assertEqual(4, result)  # Updated to reflect the corrected result
+
+    def test_6(self): # One side is 0
+        result = TriMultPerimetreWrongIf.trimultperimetre(0, 2, 3)
+        self.assertEqual(-1, result)
+
+    def test_7(self): # Two sides are 0
+        result = TriMultPerimetreWrongIf.trimultperimetre(0, 0, 3)
+        self.assertEqual(-1, result)
+
+    def test_8(self): # All sides are 0
+        result = TriMultPerimetreWrongIf.trimultperimetre(0, 0, 0)
+        self.assertEqual(-1, result)
+
+
+if __name__ == '__main__':
+    unittest.main()"
+TriPerimetre2.py,"""""""
+    Program for triangle perimeter.
+    Returns:
+        i+j+k if (i, j, k) are the sides of any triangle.
+        2*i + j or 2*i+k or 2*j+i if (i, j, k) are the sides of an isosceles triangle.
+        3*i if (i, j, k) are the sides of an equilateral triangle.
+        -1 if (i, j, k) are not the sides of a triangle.
+    
+    ERROR: in assignment line 37
+    Returns 9 for (2,3,2) while it should return 7.
+""""""
+import unittest
+
+class TriPerimetre2:
+    """"""
+        Requires:
+            ((i == 2) and (j == 3) and (k == 2))
+        Ensures:
+            res == 7
+    """"""
+    @staticmethod
+    def triPerimetre(i, j, k):
+        trityp = 0
+        res = 0
+
+        if i == 0 or j == 0 or k == 0:
+            trityp = 4
+            res = -1
+        else:
+            trityp = 0
+            if i == j:
+                trityp = trityp + 1
+                res = 2 * i
+            if i == k:
+                trityp = trityp + 2
+                # error in the assignment: should be res = 2*i
+                res = 2 * j
+            if j == k:
+                trityp = trityp + 3
+                res = 2 * j
+
+            if trityp == 0:
+                if (i + j) <= k or ((j + k) <= i or (i + k) <= j):
+                    trityp = 4
+                    res = -1
+                else:
+                    trityp = 1
+                    res = i + j + k
+            else:
+                if trityp > 3:
+                    res = res + i
+                else:
+                    if trityp == 1 and (i + j) > k:  # i==j
+                        res = res + k
+                    else:
+                        if trityp == 2 and (i + k) > j:  # i==k
+                            res = res + j
+                        else:
+                            if trityp == 3 and (j + k) > i:  # j==k
+                                res = res + i
+                            else:
+                                res = -1
+        return res
+
+class TriMultPerimetreTest(unittest.TestCase):
+    def test_0(self): # Sides form any triangle
+        result = TriMultPerimetre2.trimultperimetre(3, 4, 5)
+        self.assertEqual(60, result)
+
+    def test_1(self): # Sides form an isosceles triangle with i == j
+        result = TriMultPerimetre2.trimultperimetre(2, 2, 3)
+        self.assertEqual(12, result)
+
+    def test_2(self): # Sides form an isosceles triangle with i == k
+        result = TriMultPerimetre2.trimultperimetre(2, 3, 2)
+        self.assertEqual(12, result)
+
+    def test_3(self): # Sides form an isosceles triangle with j == k
+        result = TriMultPerimetre2.trimultperimetre(3, 2, 2)
+        self.assertEqual(12, result)
+
+    def test_4(self): # Sides form an equilateral triangle
+        result = TriMultPerimetre2.trimultperimetre(2, 2, 2)
+        self.assertEqual(8, result)
+
+    def test_5(self): # Sides do not form a triangle
+        result = TriMultPerimetre2.trimultperimetre(2, 1, 2)
+        self.assertEqual(4, result)  # Updated to reflect the corrected result
+
+    def test_6(self): # One side is 0
+        result = TriMultPerimetre2.trimultperimetre(0, 2, 3)
+        self.assertEqual(-1, result)
+
+    def test_7(self): # Two sides are 0
+        result = TriMultPerimetre2.trimultperimetre(0, 0, 3)
+        self.assertEqual(-1, result)
+
+    def test_8(self): # All sides are 0
+        result = TriMultPerimetre2.trimultperimetre(0, 0, 0)
+        self.assertEqual(-1, result)
+
+if __name__ == '__main__':
+    unittest.main()"
+Tritype.py,"
+import unittest
+
+class Tritype:
+    @staticmethod
+    def tritype(i, j, k):
+        trityp = 0
+
+        if i == 0 or j == 0 or k == 0:
+            trityp = 4
+        else:
+            trityp = 0
+
+            if i == j:
+                trityp += 1
+            if i == k:
+                trityp += 2
+            if j == k:
+                trityp += 3
+
+            if trityp == 0:
+                if (i + j) <= k or (j + k) <= i or (i + k) <= j:
+                    trityp = 4
+                else:
+                    trityp = 1
+            else:
+                if trityp > 3:
+                    trityp = 3
+                else:
+                    if trityp == 1 and (i + j) > k:
+                        trityp = 2
+                    else:
+                        # error in the assignment: trityp = 1 instead of trityp = 2
+                        if trityp == 2 and (i + k) > j:
+                            trityp = 1
+                        else:
+                            if trityp == 3 and (j + k) > i:
+                                trityp = 2
+                            else:
+                                trityp = 4
+        return trityp
+
+class TritypeTest(unittest.TestCase):
+    def test_0(self): # Sides form any triangle
+        result = Tritype.tritype(3, 4, 5)
+        self.assertEqual(1, result)
+
+    def test_1(self): # Sides form an isosceles triangle with i == j
+        result = Tritype.tritype(2, 2, 3)
+        self.assertEqual(2, result)
+
+    def test_2(self): # Sides form an isosceles triangle with i == k
+        result = Tritype.tritype(2, 3, 2)
+        self.assertEqual(2, result)
+
+    def test_3(self): # Sides form an isosceles triangle with j == k
+        result = Tritype.tritype(3, 2, 2)
+        self.assertEqual(2, result)
+
+    def test_4(self): # Sides form an equilateral triangle
+        result = Tritype.tritype(2, 2, 2)
+        self.assertEqual(3, result)
+
+    def test_5(self): # Sides do not form a triangle
+        result = Tritype.tritype(2, 1, 2)
+        self.assertEqual(4, result)
+
+    def test_6(self): # One side is 0
+        result = Tritype.tritype(0, 2, 3)
+        self.assertEqual(4, result)
+
+    def test_7(self): # Two sides are 0
+        result = Tritype.tritype(0, 0, 3)
+        self.assertEqual(4, result)
+
+    def test_8(self): # All sides are 0
+        result = Tritype.tritype(0, 0, 0)
+        self.assertEqual(4, result)
+
+
+
+if __name__ == '__main__':
+    unittest.main()"
+TritypeWrongIf1.py,"""""""
+    Program for triangle classification.
+    Returns:
+        1 if (i, j, k) are the sides of any triangle.
+        2 if (i, j, k) are the sides of an isosceles triangle.
+        3 if (i, j, k) are the sides of an equilateral triangle.
+        4 if (i, j, k) are not the sides of a triangle.
+    
+    An error has been inserted in the condition line 50.
+    When (i, j, k) = (2, 2, 4) returns 2 while it should return 4
+    since the triangular inequality 2 + 2 > 4 is not verified.
+""""""
+import unittest
+
+class TritypeWrongIf1:
+    """"""
+        Requires:
+            ((i == 2) and (j == 2) and (k == 4))
+        Ensures:
+            trityp == 4
+    """"""
+    @staticmethod
+    def tritype(i, j, k):
+        trityp = 0
+
+        if i == 0 or j == 0 or k == 0:
+            trityp = 4
+        else:
+            trityp = 0
+            if i == j:
+                trityp = trityp + 1
+            if i == k:
+                trityp = trityp + 2
+            if j == k:
+                trityp = trityp + 3
+
+            if trityp == 0:
+                if (i + j) <= k or (j + k) <= i or (i + k) <= j:
+                    trityp = 4
+                else:
+                    trityp = 1
+            else:
+                if trityp > 3:
+                    trityp = 3
+                else:
+                    if trityp == 1 and (i + j) > k:
+                        trityp = 2
+                    else:
+                        # error in the condition: trityp == 1 instead of trityp == 2
+                        if trityp == 1:
+                            if (i + k) > j:
+                                trityp = 2
+                            else:
+                                trityp = 4
+                        else:
+                            if trityp == 3 and (j + k) > i:
+                                trityp = 2
+                            else:
+                                trityp = 4
+        return trityp
+
+class TritypeTest(unittest.TestCase):
+    def test_0(self): # Sides form any triangle
+        result = TritypeWrongIf1.tritype(3, 4, 5)
+        self.assertEqual(1, result)
+
+    def test_1(self): # Sides form an isosceles triangle with i == j
+        result = TritypeWrongIf1.tritype(2, 2, 3)
+        self.assertEqual(2, result)
+
+    def test_2(self): # Sides form an isosceles triangle with i == k
+        result = TritypeWrongIf1.tritype(2, 3, 2)
+        self.assertEqual(2, result)
+
+    def test_3(self): # Sides form an isosceles triangle with j == k
+        result = TritypeWrongIf1.tritype(3, 2, 2)
+        self.assertEqual(2, result)
+
+    def test_4(self): # Sides form an equilateral triangle
+        result = TritypeWrongIf1.tritype(2, 2, 2)
+        self.assertEqual(3, result)
+
+    def test_5(self): # Sides do not form a triangle
+        result = TritypeWrongIf1.tritype(2, 1, 2)
+        self.assertEqual(4, result)
+
+    def test_6(self): # One side is 0
+        result = TritypeWrongIf1.tritype(0, 2, 3)
+        self.assertEqual(4, result)
+
+    def test_7(self): # Two sides are 0
+        result = TritypeWrongIf1.tritype(0, 0, 3)
+        self.assertEqual(4, result)
+
+    def test_8(self): # All sides are 0
+        result = TritypeWrongIf1.tritype(0, 0, 0)
+        self.assertEqual(4, result)
+
+
+if __name__ == '__main__':
+    unittest.main()"
+TritypeWrongIf2.py,"""""""
+    Program for triangle classification.
+    Returns:
+        1 if (i, j, k) are the sides of any triangle.
+        2 if (i, j, k) are the sides of an isosceles triangle.
+        3 if (i, j, k) are the sides of an equilateral triangle.
+        4 if (i, j, k) are not the sides of a triangle.
+
+    An error has been inserted in the condition line 49.
+    When (i, j, k) = (2, 2, 4) returns 2 while it should return 4 since the triangular inequality 2 + 2 > 4 is not verified.
+""""""
+import unittest
+
+class TritypeWrongIf2:
+    """"""
+        Requires:
+            ((i == 2) and (j == 2) and (k == 4))
+        Ensures:
+            trityp == 4
+    """"""
+    @staticmethod
+    def tritype(i, j, k):
+        trityp = 0
+
+        if i == 0 or j == 0 or k == 0:
+            trityp = 4
+        else:
+            trityp = 0
+            if i == j:
+                trityp = trityp + 1
+            if i == k:
+                trityp = trityp + 2
+            if j == k:
+                trityp = trityp + 3
+
+            if trityp == 0:
+                if (i + j) <= k or (j + k) <= i or (i + k) <= j:
+                    trityp = 4
+                else:
+                    trityp = 1
+            else:
+                if trityp > 3:
+                    trityp = 3
+                else:
+                    if trityp == 1 and (i + j) > k:
+                        trityp = 2
+                    else:
+                        # error in the condition: trityp == 1 instead of trityp == 2
+                        if trityp == 1 and (i + k) > j:
+                            trityp = 2
+                        else:
+                            if trityp == 3 and (j + k) > i:
+                                trityp = 2
+                            else:
+                                trityp = 4
+        return trityp
+
+class TritypeTest(unittest.TestCase):
+    def test_0(self): # Sides form any triangle
+        result = TritypeWrongIf2.tritype(3, 4, 5)
+        self.assertEqual(1, result)
+
+    def test_1(self): # Sides form an isosceles triangle with i == j
+        result = TritypeWrongIf2.tritype(2, 2, 3)
+        self.assertEqual(2, result)
+
+    def test_2(self): # Sides form an isosceles triangle with i == k
+        result = TritypeWrongIf2.tritype(2, 3, 2)
+        self.assertEqual(2, result)
+
+    def test_3(self): # Sides form an isosceles triangle with j == k
+        result = TritypeWrongIf2.tritype(3, 2, 2)
+        self.assertEqual(2, result)
+
+    def test_4(self): # Sides form an equilateral triangle
+        result = TritypeWrongIf2.tritype(2, 2, 2)
+        self.assertEqual(3, result)
+
+    def test_5(self): # Sides do not form a triangle
+        result = TritypeWrongIf2.tritype(2, 1, 2)
+        self.assertEqual(4, result)
+
+    def test_6(self): # One side is 0
+        result = TritypeWrongIf2.tritype(0, 2, 3)
+        self.assertEqual(4, result)
+
+    def test_7(self): # Two sides are 0
+        result = TritypeWrongIf2.tritype(0, 0, 3)
+        self.assertEqual(4, result)
+
+    def test_8(self): # All sides are 0
+        result = TritypeWrongIf2.tritype(0, 0, 0)
+        self.assertEqual(4, result)
+
+
+if __name__ == '__main__':
+    unittest.main()"
+Heron2.py,"import unittest
+
+class Heron2:
+    @staticmethod
+    def heron(i, j, k):
+        trityp = 0
+        s = (i + j + k) / 2
+        
+        if i == 0 or j == 0 or k == 0:
+            trityp = 4
+            return 0
+        else:
+            trityp = 0
+            if i == j:
+                trityp += 1
+            if i == k:
+                trityp += 2
+            if j == k:
+                trityp += 3
+                
+            if trityp == 0:
+                if (i + j) <= k or (j + k) <= i or (i + k) <= j:
+                    trityp = 4
+                    return -1
+                else:
+                    trityp = 1  # any triangle
+                    return s * (s - i) * (s - k) * (s - k)  # return s*(s-i)*(s-j)*(s-k)
+            else:
+                if trityp > 3:  # equilateral
+                    trityp = 3
+                    return (3 * i * i * i * i) // 16
+                else:
+                    if trityp == 1 and (i + j) > k:  # isosceles
+                        trityp = 2
+                        # i == j
+                        return s * (s - i) * (s - i) * (s - k)
+                    else:
+                        if trityp == 2 and (i + k) > j:
+                            trityp = 2
+                            # i == k
+                            return s * (s - i) * (s - j) * (s - i)
+                        else:
+                            if trityp == 3 and (j + k) > i:
+                                trityp = 2
+                                # j == k
+                                return s * (s - i) * (s - j) * (s - j)
+                            else:
+                                trityp = 4
+                                return -1
+
+class HeronTest(unittest.TestCase):
+    def test_0(self): # scalene triangle
+        result = Heron.heron(5, 12, 13)
+
+    def test_1(self): # equilateral triangle
+        result = Heron2.heron(3, 3, 3)
+        self.assertEqual(20, result)
+
+    def test_2(self): # isosceles triangle
+        result = Heron2.heron(3, 4, 3)
+        self.assertEqual(20, result)
+
+    def test_3(self): # isosceles triangle
+        result = Heron2.heron(4, 3, 3)
+        self.assertEqual(20, result)
+
+    def test_4(self): # isosceles triangle
+        result = Heron2.heron(3, 3, 4)
+        self.assertEqual(20, result)
+
+    def test_5(self): # invalid triangle
+        result = Heron2.heron(1, 2, 6)
+        self.assertEqual(-1, result)
+
+    def test_6(self): # invalid triangle
+        result = Heron2.heron(0, 0, 0)
+        self.assertEqual(0, result)
+
+    def test_7(self): # equilateral triangle
+        result = Heron.heron(5, 5, 5)
+        self.assertEqual(75, result)
+
+    def test_8(self): # isosceles triangle
+        result = Heron.heron(10, 12, 10)
+        self.assertEqual(600, result)
+
+    
+if __name__ == '__main__':
+    unittest.main()
+"
+HeronWrongIf1.py,"import unittest
+
+class HeronWrongIf1:
+    @staticmethod
+    def heron(i, j, k):
+        trityp = 0
+        s = (i + j + k) / 2
+        res = 0
+        
+        if i == 0 or j == 0 or k == 0:
+            trityp = 4
+            res = 0
+        else:
+            trityp = 0
+            
+            if i == j:
+                trityp += 1
+            if i == k:
+                trityp += 2
+            if j != k:  # (j == k)
+                trityp += 3
+                
+            if trityp == 0:
+                if (i + j) <= k or (j + k) <= i or (i + k) <= j:
+                    trityp = 4
+                    res = -1
+                else:
+                    trityp = 1  # any triangle
+                    res = s*(s-i)*(s-j)*(s-k)
+            else:
+                if trityp > 3:  # equilateral
+                    trityp = 3
+                    res = (3*i*i*i*i)/16
+                else:
+                    if trityp == 1 and (i + j) > k:  # isosceles
+                        trityp = 2
+                        # i == j
+                        res = s*(s-i)*(s-i)*(s-k)
+                    else:
+                        if trityp == 2 and (i + k) > j:
+                            trityp = 2
+                            # i == k
+                            res = s*(s-i)*(s-j)*(s-i)
+                        else:
+                            if trityp == 3 and (j + k) > i:
+                                trityp = 2
+                                # j == k
+                                res = s*(s-i)*(s-j)*(s-j)
+                            else:
+                                trityp = 4
+                                res = -1
+        return res
+
+class HeronTest(unittest.TestCase):
+    def test_0(self): # scalene triangle
+        result = HeronWrongIf1.heron(5, 12, 13)
+
+    def test_1(self): # equilateral triangle
+        result = HeronWrongIf1.heron(3, 3, 3)
+        self.assertEqual(20, result)
+
+    def test_2(self): # isosceles triangle
+        result = HeronWrongIf1.heron(3, 4, 3)
+        self.assertEqual(20, result)
+
+    def test_3(self): # isosceles triangle
+        result = HeronWrongIf1.heron(4, 3, 3)
+        self.assertEqual(20, result)
+
+    def test_4(self): # isosceles triangle
+        result = HeronWrongIf1.heron(3, 3, 4)
+        self.assertEqual(20, result)
+
+    def test_5(self): # invalid triangle
+        result = HeronWrongIf1.heron(1, 2, 6)
+        self.assertEqual(-1, result)
+
+    def test_6(self): # invalid triangle
+        result = HeronWrongIf1.heron(0, 0, 0)
+        self.assertEqual(0, result)
+
+    def test_7(self): # equilateral triangle
+        result = HeronWrongIf1.heron(5, 5, 5)
+        self.assertEqual(75, result)
+
+    def test_8(self): # isosceles triangle
+        result = HeronWrongIf1.heron(10, 12, 10)
+        self.assertEqual(600, result)  
+
+
+if __name__ == '__main__':
+    unittest.main()"
+HeronWrongIf2.py,"import unittest
+
+class HeronWrongIf2:
+    @staticmethod
+    def heron(i, j, k):
+        trityp = 0
+        s = (i + j + k) / 2
+        res = 0
+        
+        if i == 0 and j == 0 and k == 0:  # (i == 0 or j == 0 or k == 0)
+            trityp = 4
+            return 0
+        else:
+            trityp = 0
+            if i == j:
+                trityp += 1
+            if i == k:
+                trityp += 2
+            if j == k:
+                trityp += 3
+                
+            if trityp == 0:
+                if (i + j) <= k or (j + k) <= i or (i + k) <= j:
+                    trityp = 4
+                    return -1
+                else:
+                    trityp = 1  # any triangle
+                    return s * (s - i) * (s - j) * (s - k)
+            else:
+                if trityp > 3:  # equilateral
+                    trityp = 3
+                    return (3 * i * i * i * i) / 16
+                else:
+                    if trityp == 1 and (i + j) > k:  # isosceles
+                        trityp = 2
+                        # i == j
+                        res = s * (s - i) * (s - i) * (s - k)
+                    else:
+                        if trityp == 2 and (i + k) > j:
+                            trityp = 2
+                            # i == k
+                            res = s * (s - i) * (s - j) * (s - i)
+                        else:
+                            if trityp == 3 and (j + k) > i:
+                                trityp = 2
+                                # j == k
+                                res = s * (s - i) * (s - j) * (s - j)
+                            else:
+                                trityp = 4
+                                res = -1
+        return res
+    
+class HeronTest(unittest.TestCase):
+    def test_0(self): # scalene triangle
+        result = HeronWrongIf2.heron(5, 12, 13)
+
+    def test_1(self): # equilateral triangle
+        result = HeronWrongIf2.heron(3, 3, 3)
+        self.assertEqual(20, result)
+
+    def test_2(self): # isosceles triangle
+        result = HeronWrongIf2.heron(3, 4, 3)
+        self.assertEqual(20, result)
+
+    def test_3(self): # isosceles triangle
+        result = HeronWrongIf2.heron(4, 3, 3)
+        self.assertEqual(20, result)
+
+    def test_4(self): # isosceles triangle
+        result = HeronWrongIf2.heron(3, 3, 4)
+        self.assertEqual(20, result)
+
+    def test_5(self): # invalid triangle
+        result = HeronWrongIf2.heron(1, 2, 6)
+        self.assertEqual(-1, result)
+
+    def test_6(self): # invalid triangle
+        result = HeronWrongIf2.heron(0, 0, 0)
+        self.assertEqual(0, result)
+
+    def test_7(self): # equilateral triangle
+        result = HeronWrongIf2.heron(5, 5, 5)
+        self.assertEqual(75, result)
+
+    def test_8(self): # isosceles triangle
+        result = HeronWrongIf2.heron(10, 12, 10)
+        self.assertEqual(600, result)  
+
+    
+if __name__ == '__main__':
+    unittest.main()"
+HeronWrongIf3.py,"import unittest
+
+class HeronWrongIf3:
+    @staticmethod
+    def heron(i, j, k):
+        trityp = 0
+        s = (i + j + k) / 2
+        res = 0
+        
+        if i == 0 or j == 0 or k == 0:
+            trityp = 4
+            return 0
+        else:
+            trityp = 0
+            if i == j:
+                trityp += 1
+            if i == k:
+                trityp += 2
+            if j == k:
+                trityp += 3
+                
+            if trityp == 0:
+                if (i + j) <= k and ((j + k) <= i or (i + k) <= j):  # if ((i+j) <= k or ((j+k) <= i or (i+k) <= j))
+                    trityp = 4
+                    return -1
+                else:
+                    trityp = 1  # any triangle
+                    return s * (s - i) * (s - j) * (s - k)
+            else:
+                if trityp > 3:  # equilateral
+                    trityp = 3
+                    return (3 * i * i * i * i) / 16
+                else:
+                    if trityp == 1 and (i + j) > k:  # isosceles
+                        trityp = 2
+                        # i==j
+                        res = s * (s - i) * (s - i) * (s - k)
+                    else:
+                        if trityp == 2 and (i + k) > j:
+                            trityp = 2
+                            # i==k
+                            res = s * (s - i) * (s - j) * (s - i)
+                        else:
+                            if trityp == 3 and (j + k) > i:
+                                trityp = 2
+                                # j==k
+                                res = s * (s - i) * (s - j) * (s - j)
+                            else:
+                                trityp = 4
+                                res = -1
+
+        return res
+
+class HeronTest(unittest.TestCase):
+    def test_0(self): # scalene triangle
+        result = HeronWrongIf3.heron(5, 12, 13)
+
+    def test_1(self): # equilateral triangle
+        result = HeronWrongIf3.heron(3, 3, 3)
+        self.assertEqual(20, result)
+
+    def test_2(self): # isosceles triangle
+        result = HeronWrongIf3.heron(3, 4, 3)
+        self.assertEqual(20, result)
+
+    def test_3(self): # isosceles triangle
+        result = HeronWrongIf3.heron(4, 3, 3)
+        self.assertEqual(20, result)
+
+    def test_4(self): # isosceles triangle
+        result = HeronWrongIf3.heron(3, 3, 4)
+        self.assertEqual(20, result)
+
+    def test_5(self): # invalid triangle
+        result = HeronWrongIf3.heron(1, 2, 6)
+        self.assertEqual(-1, result)
+
+    def test_6(self): # invalid triangle
+        result = HeronWrongIf3.heron(0, 0, 0)
+        self.assertEqual(0, result)
+
+    def test_7(self): # equilateral triangle
+        result = HeronWrongIf3.heron(5, 5, 5)
+        self.assertEqual(75, result)
+
+    def test_8(self): # isosceles triangle
+        result = HeronWrongIf3.heron(10, 12, 10)
+        self.assertEqual(600, result)      
+
+if __name__ == '__main__':
+    unittest.main()"
+Heron.py,"""""""
+    This program computes the square of the area of a triangle using the Heron formula.
+    It uses a specific formula to compute the area when the triangle is equilateral
+    and uses some variations of the Heron formula when the triangle is isosceles.
+    We assume that the sum of the sides is even to guarantee that the expression (i+j+k)/2 used in Heron formula is an integer.
+    
+    This example illustrates the case of a program with numerical computations
+""""""
+import unittest
+
+class Heron:
+    """"""
+    requires 
+    (i==3 && j==4 && k==3);
+	ensures
+	(res == 20);
+    """"""
+    @staticmethod
+    def heron(i, j, k):
+        trityp = 0
+        res = 0
+        s = (i + j + k) / 2
+
+        if i == 0 or j == 0 or k == 0:
+            trityp = 4
+            res = 0
+        else:
+            trityp = 0
+
+            if i == j:
+                trityp += 1
+            if i == k:
+                trityp += 2
+            if j == k:
+                trityp += 3
+
+            if trityp == 0:
+                if (i + j) <= k or (j + k) <= i or (i + k) <= j:
+                    trityp = 4
+                    res = -1
+                else:
+                    trityp = 1  # any triangle
+                    res = s * (s - i) * (s - j) * (s - k)
+            else:
+                if trityp > 3:  # equilateral
+                    trityp = 3
+                    res = (3 * i * i * i * i) // 16
+                else:
+                    if trityp == 1 and (i + j) > k:  # isosceles
+                        trityp = 2
+                        # i == j
+                        res = s * (s - i) * (s - i) * (s - k)
+                    else:
+                        if trityp == 2 and (i + k) > j:
+                            trityp = 2
+                            # i == k
+                            res = s * (s - i) * (s - j) * (s - j)  # the instruction should be : res = s*(s-i)*(s-j)*(s-i)
+                        else:
+                            if trityp == 3 and (j + k) > i:
+                                trityp = 2
+                                # j == k
+                                res = s * (s - i) * (s - j) * (s - j)
+                            else:
+                                trityp = 4
+                                res = -1
+
+        return res
+
+
+class HeronTest(unittest.TestCase):
+    def test_0(self): # valid equilateral triangle
+        result = Heron.heron(3, 3, 3)
+        self.assertEqual(20, result)
+
+    def test_1(self): # valid isosceles triangle with i == j
+        result = Heron.heron(3, 3, 4)
+        self.assertEqual(20, result)
+
+    def test_2(self): # valid isosceles triangle with j == k
+        result = Heron.heron(4, 3, 3)
+        self.assertEqual(20, result)
+
+    def test_3(self): # valid isosceles triangle with i == k
+        result = Heron.heron(3, 4, 3)
+        self.assertEqual(20, result)
+
+    def test_4(self): # valid scalene triangle
+        result = Heron.heron(3, 4, 5)
+        self.assertEqual(60, result)
+
+    def test_5(self): # invalid triangle, sum of two sides is less than the third side
+        result = Heron.heron(1, 2, 6)
+        self.assertEqual(-1, result)
+
+    def test_6(self): # invalid triangle, zero side lengths
+        result = Heron.heron(0, 0, 0)
+        self.assertEqual(0, result)
+
+    def test_7(self): # invalid triangle, one side length is zero
+        result = Heron.heron(0, 2, 3)
+        self.assertEqual(0, result)
+
+    def test_8(self): # invalid triangle, two side lengths are zero
+        result = Heron.heron(0, 0, 3)
+        self.assertEqual(0, result)
+    
+
+if __name__ == '__main__':
+    unittest.main()
+
+"
+AbsMinus2.py,"
+import unittest
+class AbsMinus2:
+    @staticmethod
+    def absM(i, j):
+        result = 0
+        k = 1  # error in the assignment: k = 1 instead of k = 0
+
+        if i <= j:
+            k = k + 1
+
+        if k == 1 and i != j:
+            result = j - i
+        else:
+            result = i - j
+
+        return result
+    
+# Define a test class inheriting from unittest.TestCase
+class TestAddFunction(unittest.TestCase):
+    def test_0(self):
+        self.assertEqual(AbsMinus2.absM(1, 2), 1)  
+
+    def test_1(self):
+        self.assertEqual(AbsMinus2.absM(5, 6), 1)  
+
+    def test_2(self):
+        self.assertEqual(AbsMinus2.absM(5, 8), 3)  
+
+    def test_3(self):
+        self.assertEqual(AbsMinus2.absM(1, 6), 5)  
+        
+    def test_4(self):
+        self.assertEqual(AbsMinus2.absM(1, 8), 7)  
+    
+    def test_5(self):
+        self.assertEqual(AbsMinus2.absM(10, 2), 8)  
+    
+    def test_6(self):
+        self.assertEqual(AbsMinus2.absM(10, 6), 4)  
+        
+    def test_7(self):
+        self.assertEqual(AbsMinus2.absM(5, 2), 3)
+
+    def test_8(self):
+        self.assertEqual(AbsMinus2.absM(10, 8), 2)        
+
+if __name__ == '__main__':
+    unittest.main()
+"
+AbsMinus3.py,"import unittest
+class AbsMinus3:
+    # returns |i-j|, the absolute value of i minus j
+    @staticmethod
+    def absM(i, j):
+        result = 0
+        k = 0
+
+        if i <= j:
+            k = k + 2  # error in the assignment: k = k+2 instead of k = k+1
+
+        if k == 1 and i != j:
+            result = j - i
+        else:
+            result = i - j
+
+        return result
+    
+# Define a test class inheriting from unittest.TestCase
+class TestAddFunction(unittest.TestCase):
+    def test_0(self):
+        self.assertEqual(AbsMinus3.absM(1, 2), 1)  
+
+    def test_1(self):
+        self.assertEqual(AbsMinus3.absM(5, 6), 1)  
+
+    def test_2(self):
+        self.assertEqual(AbsMinus3.absM(5, 8), 3)  
+
+    def test_3(self):
+        self.assertEqual(AbsMinus3.absM(1, 6), 5)  
+        
+    def test_4(self):
+        self.assertEqual(AbsMinus3.absM(1, 8), 7)  
+    
+    def test_5(self):
+        self.assertEqual(AbsMinus3.absM(10, 2), 8)  
+    
+    def test_6(self):
+        self.assertEqual(AbsMinus3.absM(10, 6), 4)  
+        
+    def test_7(self):
+        self.assertEqual(AbsMinus3.absM(5, 2), 3)
+
+    def test_8(self):
+        self.assertEqual(AbsMinus3.absM(10, 8), 2)        
+
+if __name__ == '__main__':
+    unittest.main()    
+"
+AbsMinus4.py,"import unittest
+class AbsMinus4:
+    # returns |i-j|, the absolute value of i minus j
+    @staticmethod
+    def absM(i, j):
+        result = 0
+
+        if i < j:
+            result = i - j  # error in the assignment: result = i-j instead of result = j-i
+        else:
+            result = i - j
+
+        return result
+
+# Define a test class inheriting from unittest.TestCase
+class TestAddFunction(unittest.TestCase):
+    def test_0(self):
+        self.assertEqual(AbsMinus4.absM(1, 2), 1)  
+
+    def test_1(self):
+        self.assertEqual(AbsMinus4.absM(5, 6), 1)  
+
+    def test_2(self):
+        self.assertEqual(AbsMinus4.absM(5, 8), 3)  
+
+    def test_3(self):
+        self.assertEqual(AbsMinus4.absM(1, 6), 5)  
+        
+    def test_4(self):
+        self.assertEqual(AbsMinus4.absM(1, 8), 7)  
+    
+    def test_5(self):
+        self.assertEqual(AbsMinus4.absM(10, 2), 8)  
+    
+    def test_6(self):
+        self.assertEqual(AbsMinus4.absM(10, 6), 4)  
+        
+    def test_7(self):
+        self.assertEqual(AbsMinus4.absM(5, 2), 3)
+
+    def test_8(self):
+        self.assertEqual(AbsMinus4.absM(10, 8), 2)        
+
+if __name__ == '__main__':
+    unittest.main()
+"
+AbsMinus5.py,"import unittest
+class AbsMinus5:
+    # returns |i-j|, the absolute value of i minus j
+    @staticmethod
+    def absM(i, j):
+        result = i + 1  # error in the assignment: result = i+1 instead of result = i
+
+        if i < j:
+            result = j - result
+        else:
+            result = result - j
+
+        return result
+    
+# Define a test class inheriting from unittest.TestCase
+class TestAddFunction(unittest.TestCase):
+    def test_0(self):
+        self.assertEqual(AbsMinus5.absM(1, 2), 1)  
+
+    def test_1(self):
+        self.assertEqual(AbsMinus5.absM(5, 6), 1)  
+
+    def test_2(self):
+        self.assertEqual(AbsMinus5.absM(5, 8), 3)  
+
+    def test_3(self):
+        self.assertEqual(AbsMinus5.absM(1, 6), 5)  
+        
+    def test_4(self):
+        self.assertEqual(AbsMinus5.absM(1, 8), 7)  
+    
+    def test_5(self):
+        self.assertEqual(AbsMinus5.absM(10, 2), 8)  
+    
+    def test_6(self):
+        self.assertEqual(AbsMinus5.absM(10, 6), 4)  
+        
+    def test_7(self):
+        self.assertEqual(AbsMinus5.absM(5, 2), 3)
+
+    def test_8(self):
+        self.assertEqual(AbsMinus5.absM(10, 8), 2)        
+
+if __name__ == '__main__':
+    unittest.main()"
+AbsMinus6.py,"import unittest
+class AbsMinus6:
+    @staticmethod
+    def absM(i, j):
+        result = 0
+        k = 0
+
+        if i <= j:
+            k = k + 1
+
+        if k == 1 and i != j:
+            result = j - i
+        else:
+            result = j - i  # error in the assignment: result = i-j instead of result = j-i
+
+        return result
+    
+# Define a test class inheriting from unittest.TestCase
+class TestAddFunction(unittest.TestCase):
+    def test_0(self):
+        self.assertEqual(AbsMinus6.absM(1, 2), 1)  
+
+    def test_1(self):
+        self.assertEqual(AbsMinus6.absM(5, 6), 1)  
+
+    def test_2(self):
+        self.assertEqual(AbsMinus6.absM(5, 8), 3)  
+
+    def test_3(self):
+        self.assertEqual(AbsMinus6.absM(1, 6), 5)  
+        
+    def test_4(self):
+        self.assertEqual(AbsMinus6.absM(1, 8), 7)  
+    
+    def test_5(self):
+        self.assertEqual(AbsMinus6.absM(10, 2), 8)  
+    
+    def test_6(self):
+        self.assertEqual(AbsMinus6.absM(10, 6), 4)  
+        
+    def test_7(self):
+        self.assertEqual(AbsMinus6.absM(5, 2), 3)
+
+    def test_8(self):
+        self.assertEqual(AbsMinus6.absM(10, 8), 2)        
+
+if __name__ == '__main__':
+    unittest.main()
+"
+AbsMinus7.py,"import unittest
+class AbsMinus7:
+    # returns |i-j|, the absolute value of i minus j
+    @staticmethod
+    def absM(i, j):
+        k = 0
+
+        if i <= j:
+            k = k + 1
+
+        if k == 1 and i != j:
+            return i - j  # error in the assignment: return i - j instead of return j - i
+        else:
+            return i - j
+        
+# Define a test class inheriting from unittest.TestCase
+class TestAddFunction(unittest.TestCase):
+    def test_0(self):
+        self.assertEqual(AbsMinus7.absM(1, 2), 1)  
+
+    def test_1(self):
+        self.assertEqual(AbsMinus7.absM(5, 6), 1)  
+
+    def test_2(self):
+        self.assertEqual(AbsMinus7.absM(5, 8), 3)  
+
+    def test_3(self):
+        self.assertEqual(AbsMinus7.absM(1, 6), 5)  
+        
+    def test_4(self):
+        self.assertEqual(AbsMinus7.absM(1, 8), 7)  
+    
+    def test_5(self):
+        self.assertEqual(AbsMinus7.absM(10, 2), 8)  
+    
+    def test_6(self):
+        self.assertEqual(AbsMinus7.absM(10, 6), 4)  
+        
+    def test_7(self):
+        self.assertEqual(AbsMinus7.absM(5, 2), 3)
+
+    def test_8(self):
+        self.assertEqual(AbsMinus7.absM(10, 8), 2)        
+
+if __name__ == '__main__':
+    unittest.main()
+
+"
+AbsMinus8.py,"import unittest
+class AbsMinus8:
+    @staticmethod
+    def absM(i, j):
+        result = 0
+        k = 0
+
+        if i <= j:
+            k = k + 1
+
+        if k == 1 and i != j:
+            return j - i
+        else:
+            return j - i  # error in the assignment: return j - i instead of return i - j
+
+# Define a test class inheriting from unittest.TestCase
+class TestAddFunction(unittest.TestCase):
+    def test_0(self):
+        self.assertEqual(AbsMinus8.absM(1, 2), 1)  
+
+    def test_1(self):
+        self.assertEqual(AbsMinus8.absM(5, 6), 1)  
+
+    def test_2(self):
+        self.assertEqual(AbsMinus8.absM(5, 8), 3)  
+
+    def test_3(self):
+        self.assertEqual(AbsMinus8.absM(1, 6), 5)  
+        
+    def test_4(self):
+        self.assertEqual(AbsMinus8.absM(1, 8), 7)  
+    
+    def test_5(self):
+        self.assertEqual(AbsMinus8.absM(10, 2), 8)  
+    
+    def test_6(self):
+        self.assertEqual(AbsMinus8.absM(10, 6), 4)  
+        
+    def test_7(self):
+        self.assertEqual(AbsMinus8.absM(5, 2), 3)
+
+    def test_8(self):
+        self.assertEqual(AbsMinus8.absM(10, 8), 2)        
+
+if __name__ == '__main__':
+    unittest.main()"
+AbsMinusWrongIf1 .py,"import unittest
+class AbsMinusWrongIf1:
+    @staticmethod
+    def absM(i, j):
+        result = 0
+        k = 0
+
+        if i > j:  # (i <= j)
+            k = k + 1
+
+        if k == 1 and i != j:
+            result = j - i
+        else:
+            result = i - j
+
+        return result
+    
+# Define a test class inheriting from unittest.TestCase
+class TestAddFunction(unittest.TestCase):
+    def test_0(self):
+        self.assertEqual(AbsMinusWrongIf1.absM(1, 2), 1)  
+
+    def test_1(self):
+        self.assertEqual(AbsMinusWrongIf1.absM(5, 6), 1)  
+
+    def test_2(self):
+        self.assertEqual(AbsMinusWrongIf1.absM(5, 8), 3)  
+
+    def test_3(self):
+        self.assertEqual(AbsMinusWrongIf1.absM(1, 6), 5)  
+        
+    def test_4(self):
+        self.assertEqual(AbsMinusWrongIf1.absM(1, 8), 7)  
+    
+    def test_5(self):
+        self.assertEqual(AbsMinusWrongIf1.absM(10, 2), 8)  
+    
+    def test_6(self):
+        self.assertEqual(AbsMinusWrongIf1.absM(10, 6), 4)  
+        
+    def test_7(self):
+        self.assertEqual(AbsMinusWrongIf1.absM(5, 2), 3)
+
+    def test_8(self):
+        self.assertEqual(AbsMinusWrongIf1.absM(10, 8), 2)        
+
+if __name__ == '__main__':
+    unittest.main()
+"
+AbsMinusWrongIf2 .py,"import unittest
+class AbsMinusWrongIf2:
+    @staticmethod
+    def absM(i, j):
+        result = 0
+        k = 0
+        if i <= j:
+            k = k + 1
+        if k == 0 and i != j:  # (k == 1 and i != j)
+            result = j - i
+        else:
+            result = i - j
+        return result
+    
+# Define a test class inheriting from unittest.TestCase
+class TestAddFunction(unittest.TestCase):
+    def test_0(self):
+        self.assertEqual(AbsMinusWrongIf2.absM(1, 2), 1)  
+
+    def test_1(self):
+        self.assertEqual(AbsMinusWrongIf2.absM(5, 6), 1)  
+
+    def test_2(self):
+        self.assertEqual(AbsMinusWrongIf2.absM(5, 8), 3)  
+
+    def test_3(self):
+        self.assertEqual(AbsMinusWrongIf2.absM(1, 6), 5)  
+        
+    def test_4(self):
+        self.assertEqual(AbsMinusWrongIf2.absM(1, 8), 7)  
+    
+    def test_5(self):
+        self.assertEqual(AbsMinusWrongIf2.absM(10, 2), 8)  
+    
+    def test_6(self):
+        self.assertEqual(AbsMinusWrongIf2.absM(10, 6), 4)  
+        
+    def test_7(self):
+        self.assertEqual(AbsMinusWrongIf2.absM(5, 2), 3)
+
+    def test_8(self):
+        self.assertEqual(AbsMinusWrongIf2.absM(10, 8), 2)        
+
+if __name__ == '__main__':
+    unittest.main()"
+AbsMinus1.py,"import unittest
+class AbsMinus:
+    # returns |i-j|, the absolute value of i minus j
+    @staticmethod
+    def absM(i, j):
+        result = 0
+        k = 0
+
+        if i <= j:
+            k = k + 1
+
+        if k == 1 and i != j:
+            result = i - j # error in the assignment: result = i-j instead of result = j-i
+        else:
+            result = i - j
+
+        return result
+    
+# Define a test class inheriting from unittest.TestCase
+class TestAddFunction(unittest.TestCase):
+    def test_0(self):
+        self.assertEqual(AbsMinus.absM(1, 2), 1)  
+
+    def test_1(self):
+        self.assertEqual(AbsMinus.absM(5, 6), 1)  
+
+    def test_2(self):
+        self.assertEqual(AbsMinus.absM(5, 8), 3)  
+
+    def test_3(self):
+        self.assertEqual(AbsMinus.absM(1, 6), 5)  
+        
+    def test_4(self):
+        self.assertEqual(AbsMinus.absM(1, 8), 7)  
+    
+    def test_5(self):
+        self.assertEqual(AbsMinus.absM(10, 2), 8)  
+    
+    def test_6(self):
+        self.assertEqual(AbsMinus.absM(10, 6), 4)  
+        
+    def test_7(self):
+        self.assertEqual(AbsMinus.absM(5, 2), 3)
+
+    def test_8(self):
+        self.assertEqual(AbsMinus.absM(10, 8), 2)        
+
+if __name__ == '__main__':
+    unittest.main()"
+AbsMinus4-checkpoint.py,"class AbsMinus4:
+    # returns |i-j|, the absolute value of i minus j
+    @staticmethod
+    def absM(i, j):
+        result = 0
+
+        if i < j:
+            result = i - j  # error in the assignment: result = i-j instead of result = j-i
+        else:
+            result = i - j
+
+        return result
+"
+MinimumWrongIf1.py,"import unittest
+
+class MinimumWrongIf1:
+    @staticmethod
+    def minimum(tab):
+        minimum = tab[0]
+        location = 0
+        for i in range(1, len(tab)):
+            if tab[i] > minimum:  # (tab[i] < minimum)
+                minimum = tab[i]
+                location = i
+
+        return location
+
+    @staticmethod
+    def main():
+
+    def test_0(self):
+        tab = [i for i in range(5)]
+        result = MinimumWrongIf1.minimum(tab)
+        self.assertEqual(0, result)
+
+    def test_1(self):
+        tab2 = [5, 10, 6, 4, 10]
+        result = MinimumWrongIf1.minimum(tab2)
+        self.assertEqual(4, result)
+
+    def test_2(self):
+        tab3 = [15, 10, 16, 42, 11]
+        result = MinimumWrongIf1.minimum(tab3)
+        self.assertEqual(10, result)
+
+    def test_3(self):
+        tab4 = [17, 18, 16, 42, 21]
+        result = MinimumWrongIf1.minimum(tab4)
+        self.assertEqual(16, result)
+
+    def test_4(self):
+        tab5 = [71, 32, 61, 42, 21]
+        result = MinimumWrongIf1.minimum(tab5)
+        self.assertEqual(21, result)
+
+    def test_5(self):
+        tab6 = [85, 23, 65, 12, 4]
+        result = MinimumWrongIf1.minimum(tab6)
+        self.assertEqual(4, result)
+
+    def test_6(self):
+        tab7 = [24, 21, 61, 42, 10]
+        result = MinimumWrongIf1.minimum(tab7)
+        self.assertEqual(10, result)
+
+    def test_7(self):
+        tab8 = [1, 2, 3, 4, 5]
+        result = MinimumWrongIf1.minimum(tab8)
+        self.assertEqual(1, result)
+
+    def test_8(self):
+        tab9 = [100, 90, 80, 70, 60, 50, 40, 30, 20, 10]
+        result = MinimumWrongIf1.minimum(tab9)
+        self.assertEqual(10, result)
+
+
+if __name__ == '__main__':
+    unittest.main()
+"
+MinimumWrongWhile.py,"import unittest
+
+class MinimumWrongWhile:
+    @staticmethod
+    def minimum(a):
+        min = a[0]
+        i = 1
+        location = 0
+
+        while i < len(a)-1:  # Error: the condition should be (i < len(a))
+            if a[i] <= min:
+                min = a[i]
+                location = i
+            i = i + 1
+
+        return location
+    
+class MinimumTest(unittest.TestCase):
+    def test_0(self):
+        tab = [i for i in range(5)]
+        result = MinimumWrongWhile.minimum(tab)
+        self.assertEqual(self.minimum(tab), result)
+
+    def test_1(self):
+        tab2 = [5, 10, 6, 4, 10]
+        result = MinimumWrongWhile.minimum(tab2)
+        self.assertEqual(self.minimum(tab2), result)
+
+    def test_3(self):
+        tab3 = [15, 10, 16, 42, 11]
+        result = MinimumWrongWhile.minimum(tab3)
+        self.assertEqual(self.minimum(tab3), result)
+
+    def test_4(self):
+        tab4 = [17, 18, 16, 42, 21]
+        result = MinimumWrongWhile.minimum(tab4)
+        self.assertEqual(self.minimum(tab4), result)
+
+    def test_5(self):
+        tab5 = [71, 32, 61, 42, 21]
+        result = MinimumWrongWhile.minimum(tab5)
+        self.assertEqual(self.minimum(tab5), result)
+
+    def test_6(self):
+        tab6 = [85, 23, 65, 12, 4]
+        result = MinimumWrongWhile.minimum(tab6)
+        self.assertEqual(self.minimum(tab6), result)
+
+    def test_7(self):
+        tab7 = [24, 21, 61, 42, 10]
+        result = MinimumWrongWhile.minimum(tab7)
+        self.assertEqual(self.minimum(tab7), result)
+
+    def test_8(self):
+        tab9 = [100, 90, 80, 70, 60, 50, 40, 30, 20, 10]
+        result = MinimumWrongWhile.minimum(tab9)
+        self.assertEqual(10, result)
+
+
+if __name__ == '__main__':
+    unittest.main()"

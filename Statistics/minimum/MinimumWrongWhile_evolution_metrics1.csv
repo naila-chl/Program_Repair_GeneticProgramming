@@ -1,0 +1,2 @@
+Generation,Individus,Average Fitness,Std Fitness,Min Fitness,Max Fitness,Execution Time,Best Individual,erroneous exp,ligne nbr,prgrm num
+19,100,14.36,4.817717302,5,18,192.3907444,location >= a,i < len(a)-1,10,70

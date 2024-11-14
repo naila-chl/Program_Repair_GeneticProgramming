@@ -1,0 +1,7 @@
+Generation,Individus,Average Fitness,Std Fitness,Min Fitness,Max Fitness,Execution Time,Best Individual
+0,100,18.73,8.749691423130303,5.0,25.0,151.1558814048767,((((milieu - milieu) * droite) + 1) + milieu)
+1,50,12.13,8.457724280206822,5.0,25.0,151.1558814048767,((((milieu - milieu) * droite) + 1) + milieu)
+2,55,9.29,6.911287868407739,5.0,25.0,151.1558814048767,((((milieu - milieu) * droite) + 1) + milieu)
+3,53,8.13,6.300246026942122,4.0,25.0,151.1558814048767,((((milieu - milieu) * droite) + 1) + milieu)
+4,47,7.44,6.27267088248698,0.0,25.0,151.1558814048767,((((milieu - milieu) * droite) + 1) + milieu)
+5,41,6.95,6.5549599541110855,0.0,25.0,151.1558814048767,((((milieu - milieu) * droite) + 1) + milieu)
